@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { Send, CheckCircle, AlertCircle } from "lucide-react";
+import { Send, CheckCircle, AlertCircle, MessageCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 type FormData = {
@@ -15,27 +15,82 @@ type FormData = {
 
 export function LeadForm() {
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const [isSuccess, setIsSuccess] = useState(false);
+    const [errorMsg, setErrorMsg] = useState<string | null>(null);
+
     const {
         register,
         handleSubmit,
+        getValues,
         formState: { errors },
     } = useForm<FormData>();
 
     const onSubmit = async (data: FormData) => {
         setIsSubmitting(true);
+        setErrorMsg(null);
 
-        // Construct WhatsApp message
-        const message = `Hola, quiero revisar mi caso de regularización:%0A%0A- Nombre: ${data.name}%0A- País: ${data.origin}%0A- Años en España: ${data.yearsInSpain}%0A- Situación: ${data.status}%0A- WhatsApp: ${data.whatsApp}`;
+        try {
+            const response = await fetch("/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+            });
 
-        // Simulate slight delay for better UX
-        await new Promise((resolve) => setTimeout(resolve, 800));
+            const result = await response.json();
 
-        // Redirect to WhatsApp
-        // Replace 123456789 with actual number provided by user
-        window.location.href = `https://wa.me/34600000000?text=${message}`;
+            if (!result.success) {
+                throw new Error(result.error || "Error al enviar el formulario");
+            }
 
-        setIsSubmitting(false);
+            setIsSuccess(true);
+        } catch (err) {
+            console.error(err);
+            setErrorMsg("Hubo un error al enviar tu solicitud. Por favor, inténtalo de nuevo o contáctanos directamente.");
+        } finally {
+            setIsSubmitting(false);
+        }
     };
+
+    const handleWhatsAppRedirect = () => {
+        const data = getValues();
+        const message = `Hola, quiero revisar mi caso de regularización:%0A%0A- Nombre: ${data.name}%0A- País: ${data.origin}%0A- Años en España: ${data.yearsInSpain}%0A- Situación: ${data.status}%0A- WhatsApp: ${data.whatsApp}`;
+        window.open(`https://wa.me/34600000000?text=${message}`, '_blank');
+    };
+
+    if (isSuccess) {
+        return (
+            <div className="w-full max-w-md mx-auto bg-white p-8 rounded-2xl shadow-xl border border-slate-100 text-center animate-in fade-in zoom-in duration-300">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <CheckCircle className="w-10 h-10 text-success" />
+                </div>
+                <h3 className="text-2xl font-bold text-primary mb-4">
+                    ¡Solicitud enviada!
+                </h3>
+                <p className="text-muted-foreground mb-8">
+                    Hemos recibido tus datos correctamente. Una abogada revisará tu caso y te contactará pronto.
+                </p>
+
+                <div className="bg-blue-50 p-4 rounded-lg mb-6">
+                    <p className="text-sm text-blue-800 font-medium">
+                        ¿Quieres agilizar el proceso?
+                    </p>
+                    <p className="text-xs text-blue-600 mt-1">
+                        Puedes escribirnos directamente por WhatsApp ahora mismo.
+                    </p>
+                </div>
+
+                <button
+                    onClick={handleWhatsAppRedirect}
+                    className="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 rounded-lg shadow transition-colors flex items-center justify-center"
+                >
+                    <MessageCircle className="w-5 h-5 mr-2" />
+                    Hablar por WhatsApp ahora
+                </button>
+            </div>
+        );
+    }
 
     return (
         <div className="w-full max-w-md mx-auto bg-white p-6 rounded-2xl shadow-xl border border-slate-100">
@@ -147,13 +202,20 @@ export function LeadForm() {
                     )}
                 </div>
 
+                {errorMsg && (
+                    <div className="bg-red-50 text-error text-sm p-3 rounded-lg flex items-start">
+                        <AlertCircle className="w-5 h-5 mr-2 flex-shrink-0" />
+                        {errorMsg}
+                    </div>
+                )}
+
                 <button
                     disabled={isSubmitting}
                     type="submit"
                     className="w-full bg-accent hover:bg-amber-600 text-accent-foreground font-bold py-4 rounded-lg shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5 flex items-center justify-center text-lg"
                 >
                     {isSubmitting ? (
-                        "Procesando..."
+                        "Enviando..."
                     ) : (
                         <>
                             Un abogado revisará tu caso
