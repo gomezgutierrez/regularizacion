@@ -171,9 +171,13 @@ export default function GuiaPage() {
                             <p className="text-indigo-200 text-sm mb-4">
                                 Checklist con los 15 documentos que sustituyen al padrón para demostrar tu estancia.
                             </p>
-                            <button className="w-full bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-3 rounded-lg transition-colors">
+                            <a
+                                href="/checklist-regularizacion-2026.txt"
+                                download="Checklist-Regularizacion-2026.txt"
+                                className="block w-full text-center bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-3 rounded-lg transition-colors"
+                            >
                                 Descargar Checklist PDF
-                            </button>
+                            </a>
                             <p className="text-xs text-center text-indigo-300 mt-3">Descarga inmediata. Sin spam.</p>
                         </div>
 
