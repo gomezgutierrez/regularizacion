@@ -1,22 +1,25 @@
 @import "tailwindcss";
 
 :root {
-  /* Navy Blue - Trust & Authority */
-  --primary: #0f172a;
+  /* Logo Colors */
+  /* Primary: Deep Plum/Purple (Text & Arcs) */
+  --primary: #5e1744;
   --primary-foreground: #ffffff;
 
-  /* Amber - Urgency but not panic */
-  --accent: #f59e0b;
-  --accent-foreground: #000000;
+  /* Accent: Vibrant Pink (Nodes/Icon) */
+  --accent: #d91b5c;
+  --accent-foreground: #ffffff;
 
-  /* Neutrals */
-  --background: #f8fafc;
+  /* Neutrals (tinted slightly warm) */
+  --background: #fdfbfb;
   --foreground: #1e293b;
-  --muted: #f1f5f9;
-  --muted-foreground: #64748b;
+  --muted: #fce7f3;
+  /* Light pink background */
+  --muted-foreground: #831843;
+  /* Muted plum */
 
   /* Status */
-  --success: #22c55e;
+  --success: #16a34a;
   --error: #ef4444;
 }
 
