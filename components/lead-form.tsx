@@ -56,7 +56,7 @@ export function LeadForm() {
     const handleWhatsAppRedirect = () => {
         const data = getValues();
         const message = `Hola, quiero revisar mi caso de regularización:%0A%0A- Nombre: ${data.name}%0A- País: ${data.origin}%0A- Años en España: ${data.yearsInSpain}%0A- Situación: ${data.status}%0A- WhatsApp: ${data.whatsApp}`;
-        window.open(`https://wa.me/34600000000?text=${message}`, '_blank');
+        window.open(`https://wa.me/34624945297?text=${message}`, '_blank');
     };
 
     if (isSuccess) {
