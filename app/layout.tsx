@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { FloatingWhatsApp } from "@/components/floating-whatsapp";
 
+import { Footer } from "@/components/footer";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -25,6 +27,34 @@ export const metadata: Metadata = {
   }
 };
 
+// JSON-LD for ProfessionalService (Lawyer)
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService", // More specific than LocalBusiness
+  "name": "Inmaculada Moncho - Abogado Extranjería Online",
+  "image": "https://regularizacionya.es/logo.png",
+  "url": "https://regularizacionya.es",
+  "telephone": "+34624945297",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Madrid",
+    "addressCountry": "ES"
+  },
+  "priceRange": "$$",
+  "description": "Despacho especializado en la Regularización Masiva de Extranjeros 2026. Gestión 100% telemática en toda España.",
+  "legalName": "Inmaculada Moncho Giner",
+  "employee": {
+    "@type": "Person",
+    "name": "Inmaculada Moncho",
+    "jobTitle": "Abogada",
+    "memberOf": {
+      "@type": "Organization",
+      "name": "Ilustre Colegio de Abogados de Madrid (ICAM)",
+      "identifier": "14318"
+    }
+  }
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -35,7 +65,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         {children}
+        <Footer />
         <FloatingWhatsApp />
       </body>
     </html>
