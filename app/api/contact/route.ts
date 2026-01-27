@@ -14,20 +14,33 @@ export async function POST(request: Request) {
             );
         }
 
+        // Debug: Log config (masking password)
+        console.log('SMTP Config:', {
+            host: process.env.SMTP_HOST || 'default: smtp.dondominio.com',
+            port: Number(process.env.SMTP_PORT) || 587,
+            user: process.env.SMTP_USER,
+            secure: process.env.SMTP_SECURE === 'true',
+            hasPassword: !!process.env.SMTP_PASS
+        });
+
         // Configure SMTP Transporter
         const transporter = nodemailer.createTransport({
             host: process.env.SMTP_HOST || 'smtp.dondominio.com',
             port: Number(process.env.SMTP_PORT) || 587,
-            secure: process.env.SMTP_SECURE === 'true', // true for 465, false for other ports
+            secure: process.env.SMTP_SECURE === 'true',
             auth: {
                 user: process.env.SMTP_USER,
                 pass: process.env.SMTP_PASS,
             },
+            // Fix for some shared hosting certificate providers
+            tls: {
+                ciphers: 'SSLv3'
+            }
         });
 
         // Email Content
         const mailOptions = {
-            from: `Regularización de Extranjeros <${process.env.SMTP_USER}>`,
+            from: `Regularización <${process.env.SMTP_USER}>`, // Simplified name to avoid char encoding issues
             to: 'info@regularizacionextranjeros.es',
             subject: 'Nueva solicitud de regularización recibida',
             text: `
@@ -56,14 +69,31 @@ export async function POST(request: Request) {
       `,
         };
 
+        // Verify connection configuration
+        await new Promise((resolve, reject) => {
+            transporter.verify(function (error, success) {
+                if (error) {
+                    console.error("Transporter Verify Error:", error);
+                    reject(error);
+                } else {
+                    console.log("Server is ready to take our messages");
+                    resolve(success);
+                }
+            });
+        });
+
         // Send Email
         await transporter.sendMail(mailOptions);
 
         return NextResponse.json({ success: true }, { status: 200 });
-    } catch (error) {
-        console.error('Error sending email:', error);
+    } catch (error: any) {
+        console.error('API Error:', error);
         return NextResponse.json(
-            { success: false, error: 'Error al enviar el correo' },
+            {
+                success: false,
+                error: error.message || 'Error desconocido al enviar el correo',
+                details: error.toString()
+            },
             { status: 500 }
         );
     }
