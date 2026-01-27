@@ -10,20 +10,25 @@ export function Hero() {
                 <div className="flex flex-col lg:flex-row items-center gap-12 text-center lg:text-left">
 
                     <div className="flex-1 max-w-2xl">
-                        <span className="inline-block px-3 py-1 rounded-full bg-green-100 text-green-700 text-sm font-bold tracking-wide mb-6 border border-green-200 animate-pulse">
-                            ✅ Acuerdo ILP y Gobierno: Primavera 2026
-                        </span>
+                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-100 text-amber-800 text-sm font-bold tracking-wide mb-8 border border-amber-200 animate-pulse shadow-sm">
+                            <span className="relative flex h-3 w-3">
+                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                                <span className="relative inline-flex rounded-full h-3 w-3 bg-amber-500"></span>
+                            </span>
+                            Plazo estimado de apertura: Abril 2026
+                        </div>
 
                         <h1 className="text-4xl lg:text-6xl font-extrabold text-primary leading-[1.1] mb-6 tracking-tight">
-                            Regularización Extraordinaria 2025: <br className="hidden lg:block" />
+                            Regularización 2026: <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">
-                                Consigue tus papeles en España
+                                La Oportunidad de tu Vida para conseguir Papeles
                             </span>
                         </h1>
 
                         <p className="text-lg lg:text-xl text-muted-foreground mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
-                            Aprobada la <strong>Regularización Masiva (ILP)</strong> para migrantes residentes antes de final de 2025.
-                            <strong>Plazo de solicitud: Abril - Junio</strong>. Asegura tu permiso de residencia y trabajo.
+                            El Real Decreto abrirá una ventana única de 3 meses.
+                            <strong>Miles de solicitudes serán rechazadas por errores simples.</strong>
+                            No arriesgues tu futuro: prepárate con abogados colegiados.
                         </p>
 
                         <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 text-sm font-medium text-slate-600">
