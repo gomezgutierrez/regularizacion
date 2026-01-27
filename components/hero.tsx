@@ -20,8 +20,8 @@ export function Hero() {
 
                         <h1 className="text-4xl lg:text-6xl font-extrabold text-primary leading-[1.1] mb-6 tracking-tight">
                             Regularización 2026: <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">
-                                La Oportunidad de tu Vida para conseguir Papeles
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
+                                Tu Abogada Experta para Obtener tu Residencia
                             </span>
                         </h1>
 

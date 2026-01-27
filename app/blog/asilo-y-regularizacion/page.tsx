@@ -3,7 +3,7 @@ import { ShieldCheck, AlertTriangle, ArrowRight } from "lucide-react";
 import { LeadForm } from "@/components/lead-form";
 
 export const metadata: Metadata = {
-    title: "Asilo Denegado y Regularización 2026: ¿Puedo pedir papeles?",
+    title: "Asilo Denegado y Regularización 2026: ¿Puedo regularizarme?",
     description: "Si eres solicitante de asilo (tarjeta roja o blanca) o te lo han denegado, la Regularización Extraordinaria 2026 es tu oportunidad. Te explicamos cómo cambiar de régimen.",
     alternates: {
         canonical: "/blog/asilo-y-regularizacion",

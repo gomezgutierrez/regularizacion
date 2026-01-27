@@ -67,7 +67,7 @@ export default function GuiaPage() {
                         Guía Definitiva: Regularización Extraordinaria de Extranjeros 2026
                     </h1>
                     <p className="text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
-                        El manual completo para entender el Real Decreto, preparar tu expediente y evitar errores que denieguen tus papeles.
+                        El manual completo para entender el Real Decreto, preparar tu expediente y evitar errores que denieguen tu solicitud.
                     </p>
                 </div>
             </header>
