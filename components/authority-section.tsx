@@ -19,8 +19,8 @@ export function AuthoritySection() {
                             <ShieldCheck className="w-8 h-8 text-blue-600" />
                         </h2>
                         <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-                            Hola, soy María (Abogada Colegiada). Mi despacho ha ayudado a cientos de personas a conseguir sus papeles en España.
-                            Sabemos que el proceso da miedo y genera dudas. Por eso, mi objetivo es <strong>darte seguridad y claridad</strong>.
+                            Hola, soy <strong>Inmaculada Moncho</strong> (Abogada Colegiada). Mi despacho ha asesorado con éxito a cientos de personas para regularizar su situación administrativa en España.
+                            Sabemos que el proceso genera incertidumbre. Por eso, mi objetivo es ofrecerte seguridad jurídica y una gestión transparente.
                         </p>
 
                         <div className="grid grid-cols-2 gap-6 mb-8">
