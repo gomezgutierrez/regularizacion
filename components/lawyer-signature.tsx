@@ -18,7 +18,7 @@ export function LawyerSignature() {
                 </h3>
                 <p className="text-sm font-medium text-slate-600 mb-2 flex items-center justify-center md:justify-start gap-2">
                     <Scale className="w-4 h-4 text-accent" />
-                    Abogada Colegiada nº 14318 (ICAM)
+                    Abogada Colegiada nº 14318 (ICAV)
                 </p>
                 <p className="text-sm text-slate-500 max-w-md mb-4 leading-relaxed">
                     Especialista en Derecho de Extranjería y Nacionalidad.

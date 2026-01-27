@@ -37,7 +37,7 @@ const jsonLd = {
   "telephone": "+34624945297",
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": "Madrid",
+    "addressLocality": "Valencia",
     "addressCountry": "ES"
   },
   "priceRange": "$$",
@@ -49,7 +49,7 @@ const jsonLd = {
     "jobTitle": "Abogada",
     "memberOf": {
       "@type": "Organization",
-      "name": "Ilustre Colegio de Abogados de Madrid (ICAM)",
+      "name": "Ilustre Colegio de Abogados de Valencia (ICAV)",
       "identifier": "14318"
     }
   }
