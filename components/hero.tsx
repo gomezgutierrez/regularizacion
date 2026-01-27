@@ -1,4 +1,7 @@
 import { LeadForm } from "@/components/lead-form";
+import { ArrowRight, CheckCircle, Clock, FileText, Users } from "lucide-react";
+import { CaseCounter } from "@/components/case-counter";
+import Link from "next/link";
 
 export function Hero() {
     return (
@@ -37,7 +40,7 @@ export function Hero() {
                                 Alta demanda de solicitudes
                             </div>
                             <div className="hidden sm:block text-slate-300">•</div>
-                            <div>Más de 500 casos revisados hoy</div>
+                            <div>Más de <CaseCounter /> casos revisados hoy</div>
                         </div>
                     </div>
 
