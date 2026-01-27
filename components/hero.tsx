@@ -39,8 +39,7 @@ export function Hero() {
                                 <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
                                 Alta demanda de solicitudes
                             </div>
-                            <div className="hidden sm:block text-slate-300">•</div>
-                            <div>Más de <CaseCounter /> casos revisados hoy</div>
+                            <CaseCounter />
                         </div>
                     </div>
 

@@ -67,11 +67,15 @@ export function CaseCounter() {
 
     // Avoid hydration mismatch by rendering nothing strictly on server, 
     // or a skeleton. Since "Más de X casos", we can default to empty or loading state.
-    if (count === null) {
-        return <span>...</span>;
+    // If count is 0 or null (loading/off-hours), render nothing
+    if (!count || count === 0) {
+        return null;
     }
 
     return (
-        <span>{count}</span>
+        <>
+            <div className="hidden sm:block text-slate-300">•</div>
+            <div>Más de {count} casos revisados hoy</div>
+        </>
     );
 }
