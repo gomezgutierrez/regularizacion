@@ -87,7 +87,21 @@ export default function GuiaPage() {
                         </p>
                     </div>
 
-                    <h2>1. ¿Qué es la Regularización Extraordinaria 2026?</h2>
+                    {/* Table of Contents (Jump Links) */}
+                    <div className="bg-slate-50 p-6 rounded-xl border border-slate-200 mb-8">
+                        <p className="font-bold text-lg mb-4">Índice de Contenidos:</p>
+                        <nav>
+                            <ul className="space-y-2 text-sm text-slate-700">
+                                <li><a href="#que-es" className="hover:text-primary hover:underline">1. ¿Qué es la Regularización Extraordinaria 2026?</a></li>
+                                <li><a href="#requisitos" className="hover:text-primary hover:underline">2. Requisitos Clave para Aplicar</a></li>
+                                <li><a href="#documentacion" className="hover:text-primary hover:underline">3. Documentación Imprescindible</a></li>
+                                <li><a href="#proceso" className="hover:text-primary hover:underline">4. El Proceso Paso a Paso</a></li>
+                                <li><a href="#faq" className="hover:text-primary hover:underline">5. Preguntas Frecuentes (FAQ)</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <h2 id="que-es">1. ¿Qué es la Regularización Extraordinaria 2026?</h2>
                     <p>
                         Es un proceso aprobado por el Gobierno de España mediante Real Decreto que permite a miles de personas extranjeras en situación administrativa irregular obtener una autorización de residencia y trabajo.
                     </p>
@@ -95,7 +109,7 @@ export default function GuiaPage() {
                         A diferencia de los arraigos tradicionales, este proceso está diseñado para ser <strong>masivo y ágil</strong>, reduciendo los requisitos de tiempo de estancia y facilitando la tramitación telemática.
                     </p>
 
-                    <h2>2. Requisitos Clave para Aplicar</h2>
+                    <h2 id="requisitos">2. Requisitos Clave para Aplicar</h2>
                     <p>Para tener éxito en tu solicitud, debes cumplir con tres pilares fundamentales:</p>
                     <ul>
                         <li><strong>Estancia Continuada:</strong> Haber entrado en España antes del 31 de diciembre de 2025.</li>
@@ -103,7 +117,7 @@ export default function GuiaPage() {
                         <li><strong>Arraigo:</strong> Demostrar vínculos con el país (empadronamiento, lazos familiares, o oferta de empleo).</li>
                     </ul>
 
-                    <h2>3. Documentación Imprescindible</h2>
+                    <h2 id="documentacion">3. Documentación Imprescindible</h2>
                     <p>
                         La carga de la prueba recae sobre ti. Empieza a recopilar estos documentos hoy mismo:
                     </p>
@@ -122,7 +136,7 @@ export default function GuiaPage() {
                         </div>
                     </div>
 
-                    <h2>4. El Proceso Paso a Paso</h2>
+                    <h2 id="proceso">4. El Proceso Paso a Paso</h2>
                     <ol>
                         <li><strong>Recopilación (Enero-Marzo):</strong> Prepara tu carpeta de documentos. Traduce y legaliza antecedentes penales.</li>
                         <li><strong>Solicitud (Abril-Junio):</strong> Presentación telemática del expediente. Al presentarlo, se suspenden las órdenes de expulsión.</li>
@@ -142,7 +156,7 @@ export default function GuiaPage() {
                         </a>
                     </div>
 
-                    <h2>5. Preguntas Frecuentes (FAQ)</h2>
+                    <h2 id="faq">5. Preguntas Frecuentes (FAQ)</h2>
                     <p>
                         Hemos recopilado las dudas más comunes de nuestros clientes en el despacho.
                     </p>

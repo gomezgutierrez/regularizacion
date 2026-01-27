@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ShieldAlert, CheckCircle, ArrowRight } from "lucide-react";
 import { LeadForm } from "@/components/lead-form";
+import { AuthorBio } from "@/components/author-bio";
 
 export const metadata: Metadata = {
     title: "Antecedentes Penales y Regularización 2026: Guía de Cancelación",
@@ -41,6 +42,28 @@ export default function ArticlePenales() {
                         Mucha gente cree que "caducan solos". <strong>Falso.</strong> Debes solicitar su cancelación activamente. Si sale el plazo de solicitud en abril y no los has cancelado, tu expediente será denegado.
                     </p>
 
+                    {/* Sales Block CRO */}
+                    <div className="bg-slate-900 text-white p-6 rounded-xl my-8 shadow-xl border border-slate-700">
+                        <div className="flex flex-col md:flex-row items-center gap-6">
+                            <div className="shrink-0 bg-green-500 rounded-full p-3">
+                                <CheckCircle className="w-8 h-8 text-white" />
+                            </div>
+                            <div>
+                                <h3 className="text-lg font-bold text-white mb-2">¿Quieres borrar tus antecedentes ya?</h3>
+                                <p className="text-slate-300 text-sm mb-4">
+                                    No arriesgues tu regularización. Nos encargamos de pedir la cancelación policial y penal express para que llegues a tiempo.
+                                </p>
+                                <a
+                                    href="https://wa.me/34624945297?text=Quiero%20cancelar%20mis%20antecedentes%20para%20la%20Regularizaci%C3%B3n."
+                                    target="_blank"
+                                    className="inline-block bg-white text-slate-900 font-bold py-2 px-6 rounded-lg hover:bg-slate-200 transition-colors"
+                                >
+                                    Solicitar Limpieza de Expediente
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
                     <h3>Pasos para cancelar Antecedentes Policiales</h3>
                     <ol>
                         <li>Solicitar certificado al juzgado que demuestre que el caso está cerrado (archivado, absuelto o condena cumplida).</li>
@@ -62,6 +85,8 @@ export default function ArticlePenales() {
                     </p>
 
                     <hr className="my-12 border-slate-200" />
+
+                    <AuthorBio />
 
                     <div className="bg-slate-100 p-6 rounded-xl">
                         <h4 className="font-bold text-slate-800 mb-2">Sigue leyendo:</h4>

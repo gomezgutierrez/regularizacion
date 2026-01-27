@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { AlertCircle, FileCheck, XCircle, ArrowRight } from "lucide-react";
 import { LeadForm } from "@/components/lead-form";
+import { AuthorBio } from "@/components/author-bio";
 
 export const metadata: Metadata = {
     title: "Cómo demostrar estancia sin Empadronamiento para Regularización 2026",
@@ -36,36 +37,27 @@ export default function ArticleEmpadronamiento() {
                         </ul>
                     </div>
 
-                    <h2>Los 3 Medios de Prueba más sólidos (Alternativas)</h2>
+                    <h2>Lista Oficial: 15 Pruebas Admitidas para Arraigo (Sin Padrón)</h2>
+                    <p>Si no tienes empadronamiento, la Oficina de Extranjería admite estos medios de prueba (art. 124 Reglamento):</p>
 
-                    <h3>1. Historial Médico (Sanidad Pública)</h3>
-                    <p>
-                        Cualquier consulta en urgencias, asistencia primaria o ingreso hospitalario genera un registro. Solicita tu <strong>Historia Clínica</strong> en tu centro de salud. Es una prueba oficial de tu presencia física en España en esa fecha.
-                    </p>
-
-                    <h3>2. Envíos de Dinero (Remesas)</h3>
-                    <p>
-                        Los recibos de envíos de dinero a tu país (Western Union, MoneyGram, Ria) suelen incluir tu nombre, pasaporte y fecha. Si has enviado dinero regularmente, tienes un calendario de pruebas muy potente.
-                    </p>
-
-                    <h3>3. Abono Transporte Nominal</h3>
-                    <p>
-                        La tarjeta de transporte público personalizada (con tu foto y DNI/Pasaporte) registra validaciones y recargas. Solicita un certificado de movimientos al consorcio de transportes.
-                    </p>
-
-                    <div className="bg-green-50 p-6 rounded-xl border border-green-200 my-8 not-prose">
-                        <h3 className="font-bold text-green-900 flex items-center gap-2 mb-3">
-                            <FileCheck className="w-5 h-5" />
-                            Otros documentos admitidos
-                        </h3>
-                        <ul className="grid md:grid-cols-2 gap-3 text-sm text-green-800">
-                            <li>• Facturas de móvil/internet a tu nombre.</li>
-                            <li>• Cuenta bancaria (movimientos en cajeros).</li>
-                            <li>• Inscripción en biblioteca municipal.</li>
-                            <li>• Cursos de formación (públicos/privados).</li>
-                            <li>• Multas o sanciones administrativas.</li>
-                            <li>• Registro en ONGs (Cáritas, Cruz Roja).</li>
-                        </ul>
+                    <div className="bg-slate-50 p-6 rounded-xl border border-slate-200 my-6">
+                        <ol className="list-decimal ml-5 space-y-2 font-medium text-slate-800">
+                            <li><strong>Historia Clínica de la Seguridad Social</strong> (Urgencias o consultas).</li>
+                            <li><strong>Facturas de Remesas de Dinero</strong> (con tu nombre y fecha).</li>
+                            <li><strong>Abono Transporte Público</strong> (Tarjeta nominal con certificado de movimientos).</li>
+                            <li><strong>Extractos Bancarios</strong> (Pagos en comercios físicos en España).</li>
+                            <li><strong>Facturas de Suministros</strong> (Luz, agua, internet a tu nombre).</li>
+                            <li><strong>Inscripción en Biblioteca Municipal</strong> (Carnet de lector).</li>
+                            <li><strong>Cursos de Formación</strong> (Diplomas o matrículas).</li>
+                            <li><strong>Notificaciones de Multas</strong> o sanciones administrativas.</li>
+                            <li><strong>Registro en ONGs</strong> (Cáritas, Cruz Roja, Servicios Sociales).</li>
+                            <li><strong>Envíos de Correos/Paquetería</strong> (Recibos firmados).</li>
+                            <li><strong>Compras Online</strong> (Amazon/etc con dirección de entrega española).</li>
+                            <li><strong>Alta en Gimnasios</strong> o centros deportivos municipales.</li>
+                            <li><strong>Actas Notariales</strong> de presencia (Testigos).</li>
+                            <li><strong>Tarjeta de Solicitante de Asilo</strong> (Roja/Blanca) o resguardo.</li>
+                            <li><strong>Citas Previas en Extranjería</strong> (aunque no se llegaran a realizar).</li>
+                        </ol>
                     </div>
 
                     <h2>¿Qué hago si tengo "huecos" en el tiempo?</h2>
@@ -78,6 +70,8 @@ export default function ArticleEmpadronamiento() {
                     </p>
 
                     <hr className="my-12 border-slate-200" />
+
+                    <AuthorBio />
 
                     <div className="bg-slate-100 p-6 rounded-xl">
                         <h4 className="font-bold text-slate-800 mb-2">Más información relacionada:</h4>
@@ -97,6 +91,22 @@ export default function ArticleEmpadronamiento() {
 
                 <aside className="lg:w-1/3">
                     <div className="sticky top-8 space-y-8">
+
+                        {/* Lead Magnet - PDF Checklist */}
+                        <div className="bg-indigo-900 text-white p-6 rounded-2xl shadow-xl">
+                            <h3 className="text-xl font-bold mb-3">🎁 Descarga Gratis</h3>
+                            <p className="text-indigo-200 text-sm mb-4">
+                                Checklist con los 15 documentos admitidos para regularización (sin padrón).
+                            </p>
+                            <a
+                                href="/checklist-regularizacion-2026.txt"
+                                download="Checklist-Regularizacion-2026.txt"
+                                className="block w-full text-center bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-3 rounded-lg transition-colors"
+                            >
+                                Descargar PDF
+                            </a>
+                        </div>
+
                         <div className="bg-white p-6 rounded-2xl shadow-lg border border-slate-200 text-center">
                             <AlertCircle className="w-12 h-12 text-amber-500 mx-auto mb-4" />
                             <h3 className="text-xl font-bold text-slate-900 mb-2">¿Dudas con tus pruebas?</h3>

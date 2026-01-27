@@ -16,12 +16,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Regularización Masiva 2025: Requisitos y Plazos (ILP y Real Decreto)",
-  description: "Guía completa sobre la Regularización Extraordinaria de Extranjeros en España 2025. Todo sobre la ILP, el nuevo Reglamento y cómo solicitar papeles por arraigo. Revisa tu caso.",
-  keywords: ["regularización masiva", "regularización extranjeros 2025", "ILP regularización", "papeles españa", "arraigo 2025", "abogados extranjería", "real decreto regularización"],
+  title: "Letrada Inmaculada Moncho: Especialista en Regularización de Extranjeros 2026",
+  description: "Abogada Colegiada (ICAV 14318) experta en la Regularización Masiva 2026. Analizamos GRATIS tu caso de arraigo, asilo o papeles. Gestión 100% online.",
+  keywords: ["regularización masiva", "regularización extranjeros 2026", "ILP regularización", "papeles españa", "arraigo 2026", "abogados extranjería", "real decreto regularización", "inmaculada moncho"],
   openGraph: {
-    title: "Regularización Masiva 2025: ¿Tienes derecho a papeles?",
-    description: "El Gobierno aprueba la regularización extraordinaria. Comprueba requisitos, fechas y documentos necesarios.",
+    title: "Regularización Masiva 2026: ¿Tienes derecho a papeles? - Abogada Inmaculada Moncho",
+    description: "El Gobierno aprueba la regularización extraordinaria. Comprueba requisitos, fechas y documentos necesarios con una abogada experta.",
     type: "website",
     locale: "es_ES",
   }
