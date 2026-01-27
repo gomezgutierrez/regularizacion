@@ -191,7 +191,7 @@ export function LeadForm() {
                                 className="w-full px-4 py-3 rounded-lg border border-slate-200 bg-white focus:ring-2 focus:ring-primary/20 outline-none"
                             >
                                 <option value="">Seleccionar...</option>
-                                <option value="no">No, estoy limpio</option>
+                                <option value="no">No, carezco de antecedentes</option>
                                 <option value="cancelled">Sí, pero están cancelados</option>
                                 <option value="yes">Sí, están vigentes</option>
                             </select>
@@ -246,7 +246,7 @@ export function LeadForm() {
                                 className="w-full px-4 py-3 rounded-lg border border-slate-200 bg-white focus:ring-2 focus:ring-primary/20 outline-none"
                             >
                                 <option value="">Selecciona...</option>
-                                <option value="Sin papeles">Sin papeles / Irregular</option>
+                                <option value="Irregular">Situación Irregular</option>
                                 <option value="Asilo">Solicitante de Asilo / Denegado</option>
                                 <option value="Turista">Turista</option>
                                 <option value="Otro">Otro</option>
