@@ -17,6 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://regularizacionmasiva.es"),
   title: "Letrada Inmaculada Moncho: Especialista en Regularización de Extranjeros 2026",
   description: "Abogada Colegiada (ICAV 14318) experta en la Regularización Masiva 2026. Analizamos GRATIS tu caso de arraigo, asilo o residencia. Gestión 100% online.",
   keywords: ["regularización masiva", "regularización extranjeros 2026", "ILP regularización", "permiso residencia españa", "arraigo 2026", "abogados extranjería", "real decreto regularización", "inmaculada moncho"],
@@ -33,8 +34,8 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService", // More specific than LocalBusiness
   "name": "Inmaculada Moncho - Abogado Extranjería Online",
-  "image": "https://regularizacionya.es/logo.png",
-  "url": "https://regularizacionya.es",
+  "image": "https://regularizacionmasiva.es/logo.png",
+  "url": "https://regularizacionmasiva.es",
   "telephone": "+34624945297",
   "address": {
     "@type": "PostalAddress",

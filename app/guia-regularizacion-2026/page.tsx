@@ -26,7 +26,7 @@ export default function GuiaPage() {
             "name": "Despacho Legal Extranjería",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://regularizacionya.es/logo.png"
+                "url": "https://regularizacionmasiva.es/logo.png"
             }
         },
         "description": "Explicación detallada del proceso de regularización masiva de 2026 en España.",
