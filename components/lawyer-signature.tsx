@@ -26,7 +26,7 @@ export function LawyerSignature() {
                 </p>
 
                 <Link
-                    href="https://es.linkedin.com/"
+                    href="https://www.linkedin.com/in/inmaculada-moncho-84b577a/"
                     target="_blank"
                     className="inline-flex items-center gap-2 text-sm font-semibold text-blue-700 hover:text-blue-900 transition-colors"
                 >
