@@ -10,20 +10,20 @@ export function Hero() {
                 <div className="flex flex-col lg:flex-row items-center gap-12 text-center lg:text-left">
 
                     <div className="flex-1 max-w-2xl">
-                        <span className="inline-block px-3 py-1 rounded-full bg-accent/10 text-accent-foreground text-sm font-bold tracking-wide mb-6 border border-accent/20">
-                            ⚠️ Actualización Urgente 2024
+                        <span className="inline-block px-3 py-1 rounded-full bg-green-100 text-green-700 text-sm font-bold tracking-wide mb-6 border border-green-200 animate-pulse">
+                            ✅ Acuerdo alcanzado: Primavera 2026
                         </span>
 
                         <h1 className="text-4xl lg:text-6xl font-extrabold text-primary leading-[1.1] mb-6 tracking-tight">
                             Regularización Masiva en España: <br className="hidden lg:block" />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">
-                                Comprueba si puedes regularizarte
+                                Luz verde al Real Decreto
                             </span>
                         </h1>
 
                         <p className="text-lg lg:text-xl text-muted-foreground mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
-                            Se abre una posible ventana histórica para obtener papeles.
-                            No pierdas la oportunidad por falta de información o errores en la solicitud.
+                            El Gobierno y Podemos acuerdan regularizar a 500.000 personas.
+                            <strong>El plazo abrirá en Abril</strong>. Prepara tu solicitud antes de que colapse el sistema.
                         </p>
 
                         <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 text-sm font-medium text-slate-600">

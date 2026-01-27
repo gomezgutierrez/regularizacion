@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Regularización Masiva en España | Comprueba tu caso",
-  description: "Información urgente sobre la posible regularización masiva de extranjeros en España. Comprueba si cumples los requisitos.",
+  title: "Regularización Masiva España 2026 | Acuerdo y Requisitos",
+  description: "Última hora: Acuerdo para la regularización de 500.000 migrantes. Real Decreto, requisitos y plazos (Abril-Junio). Revisa tu caso gratis.",
 };
 
 export default function RootLayout({

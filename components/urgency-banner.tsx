@@ -6,7 +6,7 @@ export function UrgencySection() {
             <div className="container mx-auto flex flex-col md:flex-row items-center justify-center gap-2 text-center md:text-left text-black font-bold">
                 <AlertTriangle className="w-6 h-6 animate-pulse" />
                 <p className="text-base md:text-lg">
-                    ¡Atención! Si se aprueba la regularización, los plazos serán muy limitados. No lo dejes para el último día.
+                    ⚠️ <strong>Plazos confirmados:</strong> Solicitudes de Abril a Junio. Solo 3 meses. ¡Prepara tus documentos YA!
                 </p>
             </div>
         </section>
