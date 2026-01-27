@@ -1,4 +1,4 @@
-import { FileText, Users, Clock, CheckCircle2, AlertTriangle } from "lucide-react";
+import { FileText, Users, Clock, CheckCircle2, AlertTriangle, HelpCircle } from "lucide-react";
 
 export function InfoSection() {
     return (
@@ -16,7 +16,7 @@ export function InfoSection() {
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
                     <div className="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition-shadow">
                         <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4 text-primary">
                             <Users className="w-6 h-6" />
@@ -60,40 +60,49 @@ export function InfoSection() {
                     </div>
                 </div>
 
-                <div className="mt-16 grid md:grid-cols-2 gap-8 items-center bg-blue-50/50 p-8 rounded-3xl border border-blue-100">
-                    <div>
-                        <h3 className="text-2xl font-bold text-primary mb-4">
-                            Documentos necesarios (Previsión)
-                        </h3>
-                        <p className="text-slate-600 mb-6">
-                            Para demostrar que estabas en España antes de la fecha límite, ve recopilando:
-                        </p>
-                        <ul className="space-y-3">
-                            {[
-                                "Certificado de Empadronamiento (Histórico)",
-                                "Citas médicas o informes de urgencias",
-                                "Contratos de alquiler o recibos de suministros",
-                                "Envíos de dinero o abonos de transporte"
-                            ].map((item, i) => (
-                                <li key={i} className="flex items-center gap-3 bg-white p-3 rounded-lg shadow-sm">
-                                    <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0" />
-                                    <span className="text-slate-700 font-medium text-sm">{item}</span>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
+                {/* SEO Content & FAQ */}
+                <div className="max-w-4xl mx-auto">
+                    <h3 className="text-2xl font-bold text-primary mb-8 flex items-center gap-2">
+                        <HelpCircle className="w-6 h-6 text-accent" />
+                        Preguntas Frecuentes sobre la Regularización (FAQ)
+                    </h3>
 
-                    <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
-                        <h4 className="font-bold text-lg mb-3 text-primary">¿Por qué ahora?</h4>
-                        <p className="text-slate-600 text-sm mb-4">
-                            El Gobierno busca dar seguridad jurídica, facilitar la entrada en el mercado laboral y responder a la demanda social.
-                        </p>
-                        <div className="p-4 bg-slate-50 rounded-xl border border-slate-200">
-                            <p className="font-semibold text-primary text-sm mb-1">⚠️ Importante</p>
-                            <p className="text-xs text-slate-500">
-                                Un error en la solicitud o presentarla fuera de plazo (Abril-Junio) podría dejarte fuera.
-                            </p>
-                        </div>
+                    <div className="space-y-4">
+                        <details className="group bg-slate-50 border border-slate-200 rounded-xl overflow-hidden transition-all duration-300 open:shadow-md hover:bg-white">
+                            <summary className="flex items-center justify-between p-4 cursor-pointer font-bold text-slate-800 hover:text-primary list-none">
+                                <span>¿Cuándo empieza la regularización extraordinaria 2025?</span>
+                                <span className="transition-transform group-open:rotate-180">▼</span>
+                            </summary>
+                            <div className="p-4 pt-0 text-slate-600 leading-relaxed text-sm">
+                                Según el acuerdo entre Gobierno y Podemos, la tramitación se hará vía Real Decreto. Se espera que el plazo de solicitudes se abra en <strong>abril de 2026</strong> y dure 3 meses. Es fundamental tener la documentación lista antes de esa fecha.
+                            </div>
+                        </details>
+
+                        <details className="group bg-slate-50 border border-slate-200 rounded-xl overflow-hidden transition-all duration-300 open:shadow-md hover:bg-white">
+                            <summary className="flex items-center justify-between p-4 cursor-pointer font-bold text-slate-800 hover:text-primary list-none">
+                                <span>¿Qué documentos necesito para demostrar mi arraigo?</span>
+                                <span className="transition-transform group-open:rotate-180">▼</span>
+                            </summary>
+                            <div className="p-4 pt-0 text-slate-600 leading-relaxed text-sm">
+                                Para la regularización por la ILP o el nuevo reglamento, necesitarás pruebas de estancia en España anteriores a finales de 2025. Los documentos más válidos son:
+                                <ul className="list-disc ml-5 mt-2 space-y-1">
+                                    <li>Certificado de empadronamiento histórico.</li>
+                                    <li>Informes médicos de la Seguridad Social.</li>
+                                    <li>Justificantes de envío de dinero.</li>
+                                    <li>Abonos de transporte público nominales.</li>
+                                </ul>
+                            </div>
+                        </details>
+
+                        <details className="group bg-slate-50 border border-slate-200 rounded-xl overflow-hidden transition-all duration-300 open:shadow-md hover:bg-white">
+                            <summary className="flex items-center justify-between p-4 cursor-pointer font-bold text-slate-800 hover:text-primary list-none">
+                                <span>¿Afecta la ILP a los solicitantes de asilo?</span>
+                                <span className="transition-transform group-open:rotate-180">▼</span>
+                            </summary>
+                            <div className="p-4 pt-0 text-slate-600 leading-relaxed text-sm">
+                                Sí, esta regularización masiva es compatible y muy beneficiosa para personas con solicitud de asilo pendiente o denegada, siempre que cumplan el requisito de estancia temporal en el país. Permite cambiar a un permiso de residencia y trabajo estable.
+                            </div>
+                        </details>
                     </div>
                 </div>
             </div>

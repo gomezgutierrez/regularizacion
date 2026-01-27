@@ -11,19 +11,19 @@ export function Hero() {
 
                     <div className="flex-1 max-w-2xl">
                         <span className="inline-block px-3 py-1 rounded-full bg-green-100 text-green-700 text-sm font-bold tracking-wide mb-6 border border-green-200 animate-pulse">
-                            ✅ Acuerdo alcanzado: Primavera 2026
+                            ✅ Acuerdo ILP y Gobierno: Primavera 2026
                         </span>
 
                         <h1 className="text-4xl lg:text-6xl font-extrabold text-primary leading-[1.1] mb-6 tracking-tight">
-                            Regularización Masiva en España: <br className="hidden lg:block" />
+                            Regularización Extraordinaria 2025: <br className="hidden lg:block" />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">
-                                Luz verde al Real Decreto
+                                Consigue tus papeles en España
                             </span>
                         </h1>
 
                         <p className="text-lg lg:text-xl text-muted-foreground mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
-                            El Gobierno y Podemos acuerdan regularizar a 500.000 personas.
-                            <strong>El plazo abrirá en Abril</strong>. Prepara tu solicitud antes de que colapse el sistema.
+                            Aprobada la <strong>Regularización Masiva (ILP)</strong> para migrantes residentes antes de final de 2025.
+                            <strong>Plazo de solicitud: Abril - Junio</strong>. Asegura tu permiso de residencia y trabajo.
                         </p>
 
                         <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 text-sm font-medium text-slate-600">
