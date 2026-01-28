@@ -1,4 +1,5 @@
 import { Hero } from "@/components/hero";
+import { VideoCtaSection } from "@/components/video-cta-section";
 import { InfoSection } from "@/components/info-section";
 import { AuthoritySection } from "@/components/authority-section";
 import { UrgencySection } from "@/components/urgency-banner";
@@ -9,6 +10,7 @@ export default function Home() {
     <main className="min-h-screen font-sans selection:bg-accent/30">
       <UrgencySection />
       <Hero />
+      <VideoCtaSection />
       <InfoSection />
       <AuthoritySection />
       <FinalCta />
