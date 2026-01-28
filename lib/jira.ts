@@ -17,7 +17,10 @@ export class JiraClient {
 
     async createIssue(summary: string, description: string) {
         if (!this.domain || !this.email || !this.apiToken) {
-            console.warn('Jira credentials not set. Skipping issue creation.');
+            console.error('CRITICAL: Jira credentials missing in environment variables.');
+            console.log('JIRA_DOMAIN set:', !!this.domain);
+            console.log('JIRA_USER_EMAIL set:', !!this.email);
+            console.log('JIRA_API_TOKEN set:', !!this.apiToken);
             return null;
         }
 
