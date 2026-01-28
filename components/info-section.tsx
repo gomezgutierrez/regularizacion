@@ -84,7 +84,7 @@ export function InfoSection() {
                                 <span className="transition-transform group-open:rotate-180">▼</span>
                             </summary>
                             <div className="p-4 pt-0 text-slate-600 leading-relaxed text-sm">
-                                Para la regularización por la ILP o el nuevo reglamento, necesitarás pruebas de estancia en España anteriores a finales de 2025. Los documentos más válidos son:
+                                Para esta regularización masiva o el nuevo reglamento, necesitarás pruebas de estancia en España anteriores a finales de 2025. Los documentos más válidos son:
                                 <ul className="list-disc ml-5 mt-2 space-y-1">
                                     <li>Certificado de empadronamiento histórico.</li>
                                     <li>Informes médicos de la Seguridad Social.</li>
@@ -96,7 +96,7 @@ export function InfoSection() {
 
                         <details className="group bg-slate-50 border border-slate-200 rounded-xl overflow-hidden transition-all duration-300 open:shadow-md hover:bg-white">
                             <summary className="flex items-center justify-between p-4 cursor-pointer font-bold text-slate-800 hover:text-primary list-none">
-                                <span>¿Afecta la ILP a los solicitantes de asilo?</span>
+                                <span>¿Afecta esta regularización masiva a los solicitantes de asilo?</span>
                                 <span className="transition-transform group-open:rotate-180">▼</span>
                             </summary>
                             <div className="p-4 pt-0 text-slate-600 leading-relaxed text-sm">

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://regularizacionmasiva.es"),
   title: "Letrada Inmaculada Moncho: Especialista en Regularización de Extranjeros 2026",
   description: "Abogada Colegiada (ICAV 14318) experta en la Regularización Masiva 2026. Analizamos GRATIS tu caso de arraigo, asilo o residencia. Gestión 100% online.",
-  keywords: ["regularización masiva", "regularización extranjeros 2026", "ILP regularización", "permiso residencia españa", "arraigo 2026", "abogados extranjería", "real decreto regularización", "inmaculada moncho"],
+  keywords: ["regularización masiva", "regularización extranjeros 2026", "regularización extraordinaria", "permiso residencia españa", "arraigo 2026", "abogados extranjería", "real decreto regularización", "inmaculada moncho"],
   openGraph: {
     title: "Regularización Masiva 2026: ¿Tienes derecho a Residencia? - Abogada Inmaculada Moncho",
     description: "El Gobierno aprueba la regularización extraordinaria. Comprueba requisitos, fechas y documentos necesarios con una abogada experta.",
