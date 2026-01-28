@@ -66,8 +66,9 @@ export class JiraClient {
 
             if (!response.ok) {
                 const errorText = await response.text();
-                console.error(`Jira API Error (${response.status}):`, errorText);
-                throw new Error(`Failed to create Jira issue: ${response.status} ${response.statusText}`);
+                const safeErrorText = errorText.substring(0, 500); // Truncate to avoid creating massive logs
+                console.error(`Jira API Error (${response.status}):`, safeErrorText);
+                throw new Error(`Failed to create Jira issue: ${response.status} ${response.statusText} - DETAILS: ${safeErrorText}`);
             }
 
             const data = await response.json();
