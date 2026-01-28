@@ -48,7 +48,7 @@ export class JiraClient {
                     ],
                 },
                 issuetype: {
-                    name: "Task",
+                    name: "Tarea",
                 },
             },
         };
