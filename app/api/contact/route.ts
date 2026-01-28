@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
+import { JiraClient } from '@/lib/jira';
 
 export async function POST(request: Request) {
     try {
@@ -84,6 +85,16 @@ export async function POST(request: Request) {
 
         // Send Email
         await transporter.sendMail(mailOptions);
+
+        // Create Jira Task (Fire and forget style, but awaited here to ensure execution)
+        try {
+            const jira = new JiraClient();
+            const description = `Nombre: ${name}\nEmail/Origen: ${origin}\nSituación: ${status}\nAños en España: ${yearsInSpain}\n\nEnviado desde el formulario web.`;
+            await jira.createIssue(whatsApp, description);
+        } catch (jiraError) {
+            console.error('Failed to create Jira issue:', jiraError);
+            // Don't block the success response if Jira fails
+        }
 
         return NextResponse.json({ success: true }, { status: 200 });
     } catch (error: any) {

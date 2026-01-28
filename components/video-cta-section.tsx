@@ -51,6 +51,13 @@ export function VideoCtaSection() {
                         href="https://wa.me/34624945297"
                         target="_blank"
                         rel="noopener noreferrer"
+                        onClick={() => {
+                            fetch('/api/track-whatsapp', {
+                                method: 'POST',
+                                body: JSON.stringify({ originUrl: window.location.href }),
+                                keepalive: true
+                            }).catch(console.error);
+                        }}
                         className="group relative inline-flex items-center justify-center gap-3 bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full text-lg shadow-xl hover:shadow-green-500/30 transition-all transform hover:-translate-y-1 w-full sm:w-auto"
                     >
                         <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-shimmer" />
