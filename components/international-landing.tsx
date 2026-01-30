@@ -84,7 +84,7 @@ export function InternationalLanding({
                         </div>
 
                         {/* Right: Form */}
-                        <div id="assessment" className="relative">
+                        <div id="contacto" className="relative">
                             <div className="bg-white p-6 lg:p-8 rounded-3xl shadow-xl border border-slate-200">
                                 <h3 className="text-xl font-bold text-center mb-2">
                                     {language === 'en' ? 'Free Eligibility Check' : 'Vérification Gratuite'}
