@@ -1,11 +1,29 @@
 "use client";
 
 import { MessageCircle } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 export function FloatingWhatsApp() {
+    const pathname = usePathname();
+
+    // Default message (ES)
+    let message = "Hola, quisiera información sobre el estudio de viabilidad.";
+
+    // English message
+    if (pathname?.startsWith("/en")) {
+        message = "Hello, I would like information about the Amnesty/Regularization 2026.";
+    }
+
+    // French message
+    if (pathname?.startsWith("/fr")) {
+        message = "Bonjour, je voudrais des informations sur la Régularisation 2026.";
+    }
+
+    const encodedMessage = encodeURIComponent(message);
+
     return (
         <a
-            href="https://wa.me/34624945297?text=Hola,%20quisiera%20informaci%C3%B3n%20sobre%20la%20regularizaci%C3%B3n%202026."
+            href={`https://wa.me/34624945297?text=${encodedMessage}`}
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => {

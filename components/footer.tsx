@@ -18,8 +18,9 @@ export function Footer() {
                         <div>
                             <h2 className="text-xl font-bold text-white mb-2">Spain Regularization 2026</h2>
                             <p className="max-w-md text-sm">
-                                Online legal services provided by Inmaculada Moncho, Registered Lawyer.
-                                100% Digital Process.
+                                Online legal services provided by Inmaculada Moncho.
+                                <br />
+                                <strong>Registered Lawyer No. 6835 - ICALI</strong>
                             </p>
                         </div>
                         <div className="bg-white/5 p-2 rounded-xl">
@@ -28,9 +29,11 @@ export function Footer() {
                     </div>
 
                     <div className="border-t border-slate-800 mt-8 pt-8 text-sm flex flex-col md:flex-row justify-between items-center gap-4">
-                        <p>© 2026 Inmaculada Moncho Giner - NIF: 24376978Z</p>
+                        <p>© 2026 Inmaculada Moncho Giner - All rights reserved.</p>
                         <div className="flex gap-4">
-                            <Link href="#" className="hover:text-white">Legal Notice & Privacy Policy</Link>
+                            <Link href="#" className="hover:text-white">Legal Notice</Link>
+                            <Link href="#" className="hover:text-white">Privacy Policy</Link>
+                            <Link href="#" className="hover:text-white">Terms of Service</Link>
                         </div>
                     </div>
                 </div>
@@ -47,8 +50,9 @@ export function Footer() {
                         <div>
                             <h2 className="text-xl font-bold text-white mb-2">Régularisation Espagne 2026</h2>
                             <p className="max-w-md text-sm">
-                                Services juridiques en ligne fournis par Inmaculada Moncho, Avocate Inscrite.
-                                Processus 100% Numérique.
+                                Services juridiques en ligne fournis par Inmaculada Moncho.
+                                <br />
+                                <strong>Avocate Inscrite Nº 6835 - ICALI</strong>
                             </p>
                         </div>
                         <div className="bg-white/5 p-2 rounded-xl">
@@ -57,9 +61,11 @@ export function Footer() {
                     </div>
 
                     <div className="border-t border-slate-800 mt-8 pt-8 text-sm flex flex-col md:flex-row justify-between items-center gap-4">
-                        <p>© 2026 Inmaculada Moncho Giner - NIF: 24376978Z</p>
+                        <p>© 2026 Inmaculada Moncho Giner - Tous droits réservés.</p>
                         <div className="flex gap-4">
-                            <Link href="#" className="hover:text-white">Mentions Légales et Politique de Confidentialité</Link>
+                            <Link href="#" className="hover:text-white">Mentions Légales</Link>
+                            <Link href="#" className="hover:text-white">Politique de Confidentialité</Link>
+                            <Link href="#" className="hover:text-white">CGV</Link>
                         </div>
                     </div>
                 </div>
