@@ -52,7 +52,7 @@ export function SiteHeader() {
 
                 {/* --- MOBILE TOGGLE --- */}
                 <button
-                    className="md:hidden z-50 p-2 text-slate-600 hover:text-slate-900"
+                    className="md:hidden z-[100] p-2 text-slate-600 hover:text-slate-900"
                     onClick={toggleMenu}
                     aria-label="Toggle menu"
                 >
@@ -61,7 +61,7 @@ export function SiteHeader() {
 
                 {/* --- MOBILE OVERLAY --- */}
                 {isMenuOpen && (
-                    <div className="fixed inset-0 bg-white z-40 flex flex-col pt-20 px-6 md:hidden animate-in fade-in slide-in-from-top-5 duration-200">
+                    <div className="fixed inset-0 bg-white z-[90] flex flex-col pt-24 px-6 md:hidden animate-in fade-in slide-in-from-top-5 duration-200 h-screen overflow-y-auto">
                         {/* Mobile Languages */}
                         <div className="mb-8">
                             <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4 flex items-center">
