@@ -32,35 +32,14 @@ export function SiteHeader() {
                 {/* --- DESKTOP NAV --- */}
                 <div className="hidden md:flex items-center space-x-6">
                     {/* Language Selector */}
-                    <nav className="flex items-center bg-slate-100 rounded-full px-1 py-1">
-                        <Link
-                            href="/"
-                            className={cn(
-                                "px-3 py-1 rounded-full text-sm font-medium transition-all",
-                                isActive("/") ? "bg-white text-slate-900 shadow-sm" : "text-slate-500 hover:text-slate-900"
-                            )}
-                        >
-                            🇪🇸 ES
-                        </Link>
-                        <Link
-                            href="/en"
-                            className={cn(
-                                "px-3 py-1 rounded-full text-sm font-medium transition-all",
-                                isActive("/en") ? "bg-white text-slate-900 shadow-sm" : "text-slate-500 hover:text-slate-900"
-                            )}
-                        >
-                            🇬🇧 EN
-                        </Link>
-                        <Link
-                            href="/fr"
-                            className={cn(
-                                "px-3 py-1 rounded-full text-sm font-medium transition-all",
-                                isActive("/fr") ? "bg-white text-slate-900 shadow-sm" : "text-slate-500 hover:text-slate-900"
-                            )}
-                        >
-                            🇫🇷 FR
-                        </Link>
-                    </nav>
+                    {/* Language Selector (Simple Code) */}
+                    <div className="flex items-center gap-4 mr-4">
+                        <Link href="/" className="font-bold text-sm hover:underline text-slate-900">ES</Link>
+                        <span className="text-slate-300">|</span>
+                        <Link href="/en" className="font-bold text-sm hover:underline text-slate-900">EN</Link>
+                        <span className="text-slate-300">|</span>
+                        <Link href="/fr" className="font-bold text-sm hover:underline text-slate-900">FR</Link>
+                    </div>
 
                     {/* Contact Button */}
                     <Link
