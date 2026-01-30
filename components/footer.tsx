@@ -1,7 +1,73 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { LawyerSignature } from "./lawyer-signature";
 
 export function Footer() {
+    const pathname = usePathname();
+    const isEn = pathname?.startsWith("/en");
+    const isFr = pathname?.startsWith("/fr");
+
+    // English Content
+    if (isEn) {
+        return (
+            <footer className="bg-slate-900 text-slate-400 py-16 mt-20">
+                <div className="container mx-auto px-4">
+                    <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+                        <div>
+                            <h2 className="text-xl font-bold text-white mb-2">Spain Regularization 2026</h2>
+                            <p className="max-w-md text-sm">
+                                Online legal services provided by Inmaculada Moncho, Registered Lawyer.
+                                100% Digital Process.
+                            </p>
+                        </div>
+                        <div className="bg-white/5 p-2 rounded-xl">
+                            <LawyerSignature />
+                        </div>
+                    </div>
+
+                    <div className="border-t border-slate-800 mt-8 pt-8 text-sm flex flex-col md:flex-row justify-between items-center gap-4">
+                        <p>© 2026 Inmaculada Moncho Giner - NIF: 24376978Z</p>
+                        <div className="flex gap-4">
+                            <Link href="#" className="hover:text-white">Legal Notice & Privacy Policy</Link>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        );
+    }
+
+    // French Content
+    if (isFr) {
+        return (
+            <footer className="bg-slate-900 text-slate-400 py-16 mt-20">
+                <div className="container mx-auto px-4">
+                    <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+                        <div>
+                            <h2 className="text-xl font-bold text-white mb-2">Régularisation Espagne 2026</h2>
+                            <p className="max-w-md text-sm">
+                                Services juridiques en ligne fournis par Inmaculada Moncho, Avocate Inscrite.
+                                Processus 100% Numérique.
+                            </p>
+                        </div>
+                        <div className="bg-white/5 p-2 rounded-xl">
+                            <LawyerSignature />
+                        </div>
+                    </div>
+
+                    <div className="border-t border-slate-800 mt-8 pt-8 text-sm flex flex-col md:flex-row justify-between items-center gap-4">
+                        <p>© 2026 Inmaculada Moncho Giner - NIF: 24376978Z</p>
+                        <div className="flex gap-4">
+                            <Link href="#" className="hover:text-white">Mentions Légales et Politique de Confidentialité</Link>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        );
+    }
+
+    // Default (Spanish)
     return (
         <footer className="bg-slate-900 text-slate-300 py-16 mt-20">
             <div className="container mx-auto px-4">
