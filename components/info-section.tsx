@@ -70,7 +70,7 @@ export function InfoSection() {
                     <div className="space-y-4">
                         <details className="group bg-slate-50 border border-slate-200 rounded-xl overflow-hidden transition-all duration-300 open:shadow-md hover:bg-white">
                             <summary className="flex items-center justify-between p-4 cursor-pointer font-bold text-slate-800 hover:text-primary list-none">
-                                <span>¿Cuándo empieza la regularización extraordinaria 2025?</span>
+                                <span>¿Cuándo empieza la regularización extraordinaria 2026?</span>
                                 <span className="transition-transform group-open:rotate-180">▼</span>
                             </summary>
                             <div className="p-4 pt-0 text-slate-600 leading-relaxed text-sm">

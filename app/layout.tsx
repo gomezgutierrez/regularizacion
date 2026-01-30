@@ -18,8 +18,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://regularizacionmasiva.es"),
-  title: "Letrada Inmaculada Moncho: Especialista en Regularización de Extranjeros 2026",
-  description: "Abogada Colegiada (ICAV 14318) experta en la Regularización Masiva 2026. Analizamos GRATIS tu caso de arraigo, asilo o residencia. Gestión 100% online.",
+  title: "Regularización Masiva 2026: Abogados Extranjería y Requisitos BOE",
+  description: "Guía oficial de la Regularización de Extranjeros 2026. Te ayudamos a tramitar tus papeles si llegaste a España antes de finales de 2025. Consulta viabilidad hoy.",
   keywords: ["regularización masiva", "regularización extranjeros 2026", "regularización extraordinaria", "permiso residencia españa", "arraigo 2026", "abogados extranjería", "real decreto regularización", "inmaculada moncho"],
   openGraph: {
     title: "Regularización Masiva 2026: ¿Tienes derecho a Residencia? - Abogada Inmaculada Moncho",

@@ -22,7 +22,7 @@ export function Hero() {
                         </div>
 
                         <h1 className="text-4xl lg:text-6xl font-extrabold text-primary leading-[1.1] mb-6 tracking-tight">
-                            Regularización 2026: <br />
+                            Todo sobre la Regularización Masiva 2026 <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
                                 Tu Abogada Experta para Obtener tu Residencia
                             </span>
