@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { FloatingWhatsApp } from "@/components/floating-whatsapp";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/react";
 
 import { Footer } from "@/components/footer";
 
@@ -110,6 +111,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <FloatingWhatsApp />
+        <Analytics />
       </body>
     </html>
   );
