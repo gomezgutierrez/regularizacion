@@ -18,7 +18,12 @@ type FormData = {
     whatsApp: string;
 };
 
-export function LeadForm() {
+interface LeadFormProps {
+    className?: string;
+    language?: "es" | "en" | "fr";
+}
+
+export function LeadForm({ className, language = "es" }: LeadFormProps) {
     const [step, setStep] = useState<1 | 2>(1);
     const [isQualified, setIsQualified] = useState(true);
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -54,7 +59,13 @@ export function LeadForm() {
         setErrorMsg(null);
 
         // Sync legacy/template fields
-        data.yearsInSpain = data.entryDate === "before-2026" ? "Más de 3 años" : "Menos de 2 años"; // Just mapping for backend template compatibility if needed
+        data.yearsInSpain = data.entryDate === "before-2026" ? "Más de 3 años" : "Menos de 2 años";
+
+        // Add language to the payload
+        const payload = {
+            ...data,
+            language: language
+        };
 
         try {
             const response = await fetch("/api/contact", {
@@ -62,8 +73,9 @@ export function LeadForm() {
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify(data),
+                body: JSON.stringify(payload),
             });
+            // ... (rest is same)
 
             const result = await response.json();
 
