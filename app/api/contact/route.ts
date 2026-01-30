@@ -5,10 +5,10 @@ import { JiraClient } from '@/lib/jira';
 export async function POST(request: Request) {
     try {
         const body = await request.json();
-        const { name, origin, yearsInSpain, status, whatsApp } = body;
+        const { name, origin, yearsInSpain, status, whatsApp, email } = body;
 
         // Basic server-side validation
-        if (!name || !whatsApp || !origin) {
+        if (!name || (!whatsApp && !email)) {
             return NextResponse.json(
                 { success: false, error: 'Faltan campos obligatorios' },
                 { status: 400 }
@@ -41,17 +41,18 @@ export async function POST(request: Request) {
 
         // Email Content
         const mailOptions = {
-            from: `Regularización <${process.env.SMTP_USER}>`, // Simplified name to avoid char encoding issues
+            from: `Regularización <${process.env.SMTP_USER}>`,
             to: 'info@regularizacionextranjeros.es',
             subject: 'Nueva solicitud de regularización recibida',
             text: `
         Nueva solicitud de regularización:
         
         Nombre: ${name}
-        País de Origen: ${origin}
-        Años en España: ${yearsInSpain}
-        Situación Actual: ${status}
-        WhatsApp: ${whatsApp}
+        Email: ${email || 'No especificado'}
+        País de Origen: ${origin || 'No especificado'}
+        Años en España: ${yearsInSpain || 'No especificado'}
+        Situación Actual: ${status || 'No especificado'}
+        WhatsApp: ${whatsApp || 'No especificado'}
         
         -----------------------------------
         Este mensaje fue enviado desde el formulario de la web.
@@ -60,10 +61,11 @@ export async function POST(request: Request) {
         <h2>Nueva solicitud de regularización</h2>
         <ul>
           <li><strong>Nombre:</strong> ${name}</li>
-          <li><strong>País de Origen:</strong> ${origin}</li>
-          <li><strong>Años en España:</strong> ${yearsInSpain}</li>
-          <li><strong>Situación Actual:</strong> ${status}</li>
-          <li><strong>WhatsApp:</strong> ${whatsApp}</li>
+          <li><strong>Email:</strong> ${email || 'No especificado'}</li>
+          <li><strong>País de Origen:</strong> ${origin || 'No especificado'}</li>
+          <li><strong>Años en España:</strong> ${yearsInSpain || 'No especificado'}</li>
+          <li><strong>Situación Actual:</strong> ${status || 'No especificado'}</li>
+          <li><strong>WhatsApp:</strong> ${whatsApp || 'No especificado'}</li>
         </ul>
         <br>
         <p><small>Este mensaje fue enviado desde el formulario de la web.</small></p>
