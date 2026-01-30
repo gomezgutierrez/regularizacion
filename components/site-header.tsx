@@ -13,6 +13,15 @@ export function SiteHeader() {
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
     const closeMenu = () => setIsMenuOpen(false);
 
+    const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+        e.preventDefault();
+        closeMenu();
+        const contactSection = document.getElementById("contacto");
+        if (contactSection) {
+            contactSection.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
     // Helpers to determine active language
     const isActive = (path: string) => {
         if (path === "/" && pathname === "/") return true;
@@ -44,6 +53,7 @@ export function SiteHeader() {
                     {/* Contact Button */}
                     <Link
                         href="#contacto"
+                        onClick={handleContactClick}
                         className="bg-slate-900 hover:bg-slate-800 text-white px-5 py-2 rounded-full font-bold text-sm transition-colors flex items-center"
                     >
                         Contactar
@@ -127,7 +137,7 @@ export function SiteHeader() {
                         {/* Mobile CTA */}
                         <Link
                             href="#contacto"
-                            onClick={closeMenu}
+                            onClick={handleContactClick}
                             className="w-full bg-slate-900 text-white font-bold text-center py-4 rounded-xl shadow-lg flex items-center justify-center"
                         >
                             <Phone className="w-5 h-5 mr-2" />
