@@ -6,6 +6,7 @@ import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react";
 
 import { Footer } from "@/components/footer";
+import { SiteHeader } from "@/components/site-header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -104,10 +105,15 @@ export default function RootLayout({
           `}
         </Script>
 
+
+
+        // ...
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <SiteHeader />
         {children}
         <Footer />
         <FloatingWhatsApp />
