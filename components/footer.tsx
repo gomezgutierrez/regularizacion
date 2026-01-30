@@ -40,7 +40,7 @@ export function Footer() {
                     <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                         <p>© 2026 RegularizaciónYa. Titular: Inmaculada Moncho Giner - N.I.F.: 24376978Z</p>
                         <div className="flex gap-6">
-                            <Link href="/condiciones-contratacion" className="hover:text-white">Aviso Legal y Condiciones</Link>
+                            <Link href="/condiciones-contratacion" className="hover:text-white">Términos y Condiciones</Link>
                             <Link href="#" className="hover:text-white">Política de Privacidad</Link>
                             <Link href="#" className="hover:text-white">Cookies</Link>
                         </div>

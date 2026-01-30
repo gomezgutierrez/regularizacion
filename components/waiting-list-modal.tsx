@@ -83,9 +83,9 @@ export function WaitingListModal({ isOpen, onClose }: WaitingListModalProps) {
                         <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 text-green-600">
                             <CheckCircle className="w-10 h-10" />
                         </div>
-                        <h3 className="text-2xl font-bold text-slate-900 mb-2">¡Datos Recibidos!</h3>
+                        <h3 className="text-2xl font-bold text-slate-900 mb-2">¡Estás en la Lista!</h3>
                         <p className="text-slate-600 mb-8">
-                            Te avisaremos personalmente en cuanto el servicio de pago esté activo (cuestión de horas).
+                            Hemos registrado tu pre-solicitud. Te enviaremos el enlace de pago seguro en cuanto revisemos tus datos y validemos tu posición en la cola.
                         </p>
                         <button
                             onClick={onClose}
@@ -98,13 +98,13 @@ export function WaitingListModal({ isOpen, onClose }: WaitingListModalProps) {
                     <div className="p-8">
                         <div className="mb-6">
                             <div className="inline-block px-3 py-1 rounded-full bg-amber-100 text-amber-700 text-xs font-bold tracking-wide uppercase mb-3">
-                                Lista de Espera Prioritaria
+                                Alta Demanda / Plazas Limitadas
                             </div>
                             <h2 className="text-2xl font-bold text-slate-900 mb-3 leading-tight">
-                                El pago telemático se activará en breves momentos
+                                Gestión de Cola Prioritaria
                             </h2>
                             <p className="text-slate-600 text-sm leading-relaxed">
-                                Estamos finalizando la configuración bancaria segura. Déjanos tus datos y <strong>te avisaremos inmediatamente</strong> cuando puedas confirmar tu estudio de viabilidad.
+                                Debido al alto volumen de solicitudes para la Regularización 2026, estamos asignando los Estudios de Viabilidad por estricto orden de llegada. <strong>Regístrate ahora para asegurar tu posición.</strong> Te enviaremos el enlace de pago seguro en cuanto validemos tu pre-solicitud.
                             </p>
                         </div>
 
@@ -164,12 +164,12 @@ export function WaitingListModal({ isOpen, onClose }: WaitingListModalProps) {
                                         <Loader2 className="w-5 h-5 mr-2 animate-spin" /> Procesando...
                                     </>
                                 ) : (
-                                    "¡Avisadme cuando esté listo!"
+                                    "Unirme a la Lista Prioritaria"
                                 )}
                             </button>
 
                             <p className="text-xs text-center text-slate-400 mt-4">
-                                Tus datos se usarán exclusivamente para notificarte la disponibilidad.
+                                Tus datos se usarán exclusivamente para gestionar tu turno en la cola.
                             </p>
                         </form>
                     </div>

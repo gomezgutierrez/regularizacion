@@ -1,9 +1,4 @@
-import { Hero } from "@/components/hero";
-import { VideoCtaSection } from "@/components/video-cta-section";
-import { InfoSection } from "@/components/info-section";
-import { AuthoritySection } from "@/components/authority-section";
-import { UrgencySection } from "@/components/urgency-banner";
-import { FinalCta } from "@/components/final-cta";
+import { PricingSection } from "@/components/pricing-section";
 
 export default function Home() {
   return (
@@ -12,6 +7,7 @@ export default function Home() {
       <Hero />
       <VideoCtaSection />
       <InfoSection />
+      <PricingSection />
       <AuthoritySection />
       <FinalCta />
 
