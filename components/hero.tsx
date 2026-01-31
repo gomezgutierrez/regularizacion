@@ -16,16 +16,21 @@ export function Hero() {
                         Abogada Colegiada ICAV 14318
                     </div>
 
-                    <h1 className="text-4xl lg:text-6xl font-extrabold text-slate-900 leading-[1.1] mb-6 tracking-tight">
-                        Tu Residencia en España 2026: <br />
+                    <h1 className="text-4xl lg:text-7xl font-extrabold text-slate-900 leading-[1.1] mb-8 tracking-tight">
+                        Regularización Masiva 2026 <br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-                            Gestión Profesional de Principio a Fin
+                            Tu Trámite de Extranjería
                         </span>
                     </h1>
 
-                    <h2 className="text-xl lg:text-2xl font-medium text-slate-600 mb-10 leading-relaxed max-w-3xl mx-auto">
-                        Como abogada colegiada (ICAV 14318), te acompaño en todo el proceso de regularización. Un servicio integral, transparente y sin sorpresas.
+                    <h2 className="text-2xl lg:text-3xl font-bold text-slate-800 mb-6">
+                        Presenta tu expediente con máximas garantías legales
                     </h2>
+
+                    <p className="text-lg text-slate-600 mb-10 leading-relaxed max-w-2xl mx-auto">
+                        La ventana de solicitud será breve y estricta. <br className="hidden md:inline" />
+                        No arriesgues tu futuro con errores burocráticos.
+                    </p>
 
                     <div className="flex flex-col items-center gap-4 w-full justify-center mb-12">
                         <a
