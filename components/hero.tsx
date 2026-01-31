@@ -17,16 +17,18 @@ export function Hero() {
                     </div>
 
                     <h1 className="text-4xl lg:text-7xl font-extrabold text-slate-900 leading-[1.1] mb-8 tracking-tight">
-                        Regularización Masiva 2026 <br />
+                        Abogada Extranjería Valencia <br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-                            Tu Permiso de Residencia, Asegurado
+                            Regularización 2026
                         </span>
                     </h1>
 
-                    <p className="text-lg lg:text-2xl text-slate-600 mb-10 leading-relaxed max-w-2xl mx-auto">
-                        La ventana de solicitud será breve y estricta.
-                        <br className="hidden md:block" />
-                        <strong>No arriesgues tu futuro con errores burocráticos.</strong>
+                    <h2 className="text-2xl lg:text-3xl font-bold text-slate-800 mb-6">
+                        Presenta tu expediente con máximas garantías legales
+                    </h2>
+
+                    <p className="text-lg text-slate-600 mb-10 leading-relaxed max-w-2xl mx-auto">
+                        Evita errores comunes y denegaciones. Analizo tu caso bajo los criterios de la Reforma 2026 para asegurar que cada documento sea impecable antes de su presentación.
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center gap-4 w-full justify-center mb-12">
@@ -40,13 +42,12 @@ export function Hero() {
                             <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                         </a>
 
-                        <div className="flex flex-col gap-1">
-                            <div className="flex items-center gap-2 text-sm font-medium text-slate-500 bg-white px-4 py-2 rounded-full shadow-sm border border-slate-100 w-fit">
-                                <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                                Plazas limitadas por orden de pago
+                        <div className="flex flex-col gap-2 max-w-xs text-left">
+                            <div className="inline-block bg-purple-100 text-purple-700 px-3 py-1 rounded-md text-xs font-bold border border-purple-200">
+                                ✨ 100% DEDUCIBLE DEL TRÁMITE FINAL
                             </div>
-                            <p className="text-xs text-slate-500 ml-2 font-medium">
-                                * 100% deducible del trámite final (350€)
+                            <p className="text-[11px] text-slate-500 leading-tight">
+                                Este pago se restará del coste total de tu gestión (350€), por lo que el estudio te sale gratis al formalizar tu proceso con nosotros.
                             </p>
                         </div>
                     </div>
@@ -58,7 +59,7 @@ export function Hero() {
                             <CheckCircle className="w-4 h-4 mr-2 text-green-500" /> Trámite 100% Online
                         </div>
                         <div className="flex items-center">
-                            <CheckCircle className="w-4 h-4 mr-2 text-green-500" /> Sin Cita Previa
+                            <CheckCircle className="w-4 h-4 mr-2 text-green-500" /> Colegiada ICAV 14318
                         </div>
                         <div className="flex items-center">
                             <CheckCircle className="w-4 h-4 mr-2 text-green-500" /> Respuesta en 24h
