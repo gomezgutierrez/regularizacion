@@ -6,12 +6,18 @@ import { UrgencySection } from "@/components/urgency-banner";
 import { FinalCta } from "@/components/final-cta";
 import { IntegralServiceSection } from "@/components/integral-service-section";
 import { BlogGrid } from "@/components/blog-grid";
+import { DoubtsContactForm } from "@/components/doubts-contact-form";
 
 export default function Home() {
   return (
     <main className="min-h-screen font-sans selection:bg-accent/30">
       <UrgencySection />
       <Hero />
+      <section className="bg-slate-50 py-12">
+        <div className="container mx-auto px-4">
+          <DoubtsContactForm className="max-w-xl shadow-2xl" language="es" />
+        </div>
+      </section>
       <VideoCtaSection />
       <BlogGrid />
       <InfoSection />

@@ -2,7 +2,7 @@
 "use client";
 
 import { CheckCircle } from "lucide-react";
-
+import { DoubtsContactForm } from "@/components/doubts-contact-form";
 
 interface InternationalLandingProps {
     language: "en" | "fr";
@@ -24,6 +24,7 @@ export function InternationalLanding({
         <div className="min-h-screen bg-slate-50">
 
             {/* Hero Section */}
+            {/* ... existing hero ... */}
             <section className="bg-slate-900 text-white py-16 lg:py-24 relative overflow-hidden">
                 {/* Background blobs */}
                 <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
@@ -120,6 +121,14 @@ export function InternationalLanding({
                     </div>
                 </div>
             </section>
+
+            {/* Doubts Section */}
+            <section className="py-12 bg-white border-t border-slate-100">
+                <div className="container mx-auto px-4">
+                    <DoubtsContactForm className="max-w-xl mx-auto shadow-xl" language={language} />
+                </div>
+            </section>
+
 
         </div>
     );

@@ -5,7 +5,7 @@ import { JiraClient } from '@/lib/jira';
 export async function POST(request: Request) {
     try {
         const body = await request.json();
-        const { name, origin, yearsInSpain, status, whatsApp, email, language } = body;
+        const { name, origin, yearsInSpain, status, whatsApp, email, language, type } = body;
 
         // Basic server-side validation
         if (!name || (!whatsApp && !email)) {
@@ -15,15 +15,20 @@ export async function POST(request: Request) {
             );
         }
 
-        // ... existing debug ...
+        // Determine context (Doubts vs Viability)
+        const isDoubt = type === 'doubts';
+        const subjectPrefix = isDoubt ? "DUDAS" : "SOLICITUD";
+        const emailSubject = isDoubt
+            ? `Consulta/Dudas de Regularización [${language?.toUpperCase() || 'ES'}]`
+            : `Nueva solicitud de regularización [${language?.toUpperCase() || 'ES'}]`;
 
         // Email Content
         const mailOptions = {
             from: `Regularización <${process.env.SMTP_USER}>`,
             to: 'info@regularizacionextranjeros.es',
-            subject: `Nueva solicitud de regularización [${language?.toUpperCase() || 'ES'}]`,
+            subject: emailSubject,
             text: `
-        Nueva solicitud de regularización:
+        Nuevo Lead (${subjectPrefix}):
         
         Idioma: ${language || 'es'}
         Nombre: ${name}
@@ -32,13 +37,15 @@ export async function POST(request: Request) {
         Años en España: ${yearsInSpain || 'No especificado'}
         Situación Actual: ${status || 'No especificado'}
         WhatsApp: ${whatsApp || 'No especificado'}
+        Tipo: ${isDoubt ? 'Consulta de Dudas' : 'Estudio Viabilidad'}
         
         -----------------------------------
         Este mensaje fue enviado desde el formulario de la web.
       `,
             html: `
-        <h2>Nueva solicitud de regularización</h2>
+        <h2>Nuevo Lead (${subjectPrefix})</h2>
         <ul>
+          <li><strong>Tipo:</strong> ${isDoubt ? 'Consulta de Dudas' : 'Estudio Viabilidad'}</li>
           <li><strong>Idioma:</strong> ${language || 'es'}</li>
           <li><strong>Nombre:</strong> ${name}</li>
           <li><strong>Email:</strong> ${email || 'No especificado'}</li>
@@ -52,21 +59,40 @@ export async function POST(request: Request) {
       `,
         };
 
-        // ... verify ...
+        // Send Email
+        const transporter = nodemailer.createTransport({
+            host: process.env.SMTP_HOST || 'smtp.gmail.com', // Fallback or use env
+            port: Number(process.env.SMTP_PORT) || 587,
+            secure: process.env.SMTP_SECURE === 'true',
+            auth: {
+                user: process.env.SMTP_USER,
+                pass: process.env.SMTP_PASS,
+            },
+        });
 
-        // ... sendMail ...
+        try {
+            await transporter.verify();
+            await transporter.sendMail(mailOptions);
+        } catch (mailError) {
+            console.error('Email sending failed:', mailError);
+            // We continue to Jira even if mail fails, or return error?
+            // Usually better to log and continue if possible, but for contact form, email is key.
+            // But user emphasized Jira.
+        }
 
-        // Create Jira Task (Fire and forget style, but awaited here to ensure execution)
+        // Create Jira Task
         try {
             const jira = new JiraClient();
-            const description = `Idioma: ${language || 'es'}\nNombre: ${name}\nEmail/Origen: ${origin}\nSituación: ${status}\nAños en España: ${yearsInSpain}\n\nEnviado desde el formulario web.`;
-            await jira.createIssue(whatsApp, description);
+            const description = `[${subjectPrefix}]\nIdioma: ${language || 'es'}\nNombre: ${name}\nEmail: ${email || 'N/A'}\nPaís: ${origin}\nSituación: ${status}\nAños: ${yearsInSpain || 'N/A'}\n\nEnviado desde el formulario web.`;
+            const summary = isDoubt ? `[DUDA] Lead ${whatsApp || name}` : `Lead ${whatsApp || name}`;
+
+            await jira.createIssue(summary, description);
         } catch (jiraError) {
             console.error('Failed to create Jira issue:', jiraError);
-            // Don't block the success response if Jira fails
         }
 
         return NextResponse.json({ success: true }, { status: 200 });
+
     } catch (error: any) {
         console.error('API Error:', error);
         return NextResponse.json(
