@@ -107,7 +107,7 @@ export function Hero() {
                                 <div className="text-5xl font-bold text-white mb-2">350€</div>
                                 <div className="text-slate-400 text-[10px] mb-6">IVA Incluido</div>
 
-                                <ul className="text-left space-y-3 mb-8 text-[11px] text-slate-300 hidden md:block pl-2">
+                                <ul className="text-left space-y-3 mb-8 text-[11px] text-slate-300 pl-2">
                                     <li className="flex items-start"><Check className="w-3 h-3 text-[#E91E63] mr-2 mt-0.5" /> <span>Análisis de viabilidad (incluido)</span></li>
                                     <li className="flex items-start"><Check className="w-3 h-3 text-[#E91E63] mr-2 mt-0.5" /> <span>Preparación y presentación</span></li>
                                     <li className="flex items-start"><Check className="w-3 h-3 text-[#E91E63] mr-2 mt-0.5" /> <span>Respuesta a requerimientos</span></li>
