@@ -1,13 +1,9 @@
 
 "use client";
 
-import { useState } from "react";
 import { ArrowRight, Check, Scale } from "lucide-react";
-import { WaitingListModal } from "@/components/waiting-list-modal";
 
 export function PricingSection() {
-    const [isModalOpen, setIsModalOpen] = useState(false);
-
     return (
         <section className="py-20 bg-slate-50 border-y border-slate-200" id="estudio-viabilidad">
             <div className="container mx-auto px-4 max-w-5xl">
@@ -57,13 +53,15 @@ export function PricingSection() {
                         <div className="text-5xl font-bold text-white mb-2">39€</div>
                         <div className="text-slate-400 text-xs mb-8">IVA Incluido</div>
 
-                        <button
-                            onClick={() => setIsModalOpen(true)}
+                        <a
+                            href="https://buy.stripe.com/cNi7sEfpOg4oalw53f6Ri00"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="w-full bg-accent hover:bg-accent/90 text-white font-bold py-4 rounded-xl shadow-lg shadow-accent/20 transition-all transform hover:scale-[1.02] flex items-center justify-center group"
                         >
-                            SOLICITAR ESTUDIO
+                            PAGAR ESTUDIO DE VIABILIDAD - 39€
                             <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                        </button>
+                        </a>
 
                         <p className="text-xs text-slate-500 mt-4">
                             Pago 100% seguro.
@@ -74,8 +72,6 @@ export function PricingSection() {
 
                 </div>
             </div>
-
-            <WaitingListModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
         </section>
     );
 }

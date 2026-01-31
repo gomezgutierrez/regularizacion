@@ -2,7 +2,7 @@
 "use client";
 
 import { CheckCircle } from "lucide-react";
-import { LeadForm } from "@/components/lead-form";
+
 
 interface InternationalLandingProps {
     language: "en" | "fr";
@@ -43,10 +43,12 @@ export function InternationalLanding({
                     </p>
 
                     <a
-                        href="#assessment"
+                        href="https://buy.stripe.com/cNi7sEfpOg4oalw53f6Ri00"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="inline-block bg-white text-slate-900 hover:bg-slate-100 font-bold text-lg px-8 py-4 rounded-full shadow-lg transition-transform hover:scale-105"
                     >
-                        {ctaText}
+                        {language === 'en' ? 'PAY FOR ELIGIBILITY STUDY - 39€' : "PAYER L'ÉTUDE DE FAISABILITÉ - 39€"}
                     </a>
                 </div>
             </section>
@@ -83,16 +85,29 @@ export function InternationalLanding({
                             </div>
                         </div>
 
-                        {/* Right: Form */}
+                        {/* Right: Payment Card */}
                         <div id="contacto" className="relative">
-                            <div className="bg-white p-6 lg:p-8 rounded-3xl shadow-xl border border-slate-200">
-                                <h3 className="text-xl font-bold text-center mb-2">
-                                    {language === 'en' ? 'Free Eligibility Check' : 'Vérification Gratuite'}
+                            <div className="bg-white p-6 lg:p-8 rounded-3xl shadow-xl border border-slate-200 text-center">
+                                <h3 className="text-xl font-bold mb-4">
+                                    {language === 'en' ? 'Start Your Process' : 'Commencez Votre Processus'}
                                 </h3>
-                                <p className="text-center text-slate-500 text-sm mb-6">
-                                    {language === 'en' ? 'Confidential & Secure' : 'Confidentiel et Sécurisé'}
+                                <div className="text-4xl font-bold text-slate-900 mb-2">39€</div>
+                                <p className="text-slate-500 text-sm mb-8">
+                                    {language === 'en' ? 'Full Eligibility Report included' : 'Rapport de Faisabilité inclus'}
                                 </p>
-                                <LeadForm language={language} />
+
+                                <a
+                                    href="https://buy.stripe.com/cNi7sEfpOg4oalw53f6Ri00"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="w-full inline-block bg-accent hover:bg-accent/90 text-white font-bold py-4 rounded-xl shadow-lg transition-transform hover:scale-[1.02]"
+                                >
+                                    {language === 'en' ? 'PAY FOR ELIGIBILITY STUDY - 39€' : "PAYER L'ÉTUDE DE FAISABILITÉ - 39€"}
+                                </a>
+
+                                <p className="text-xs text-slate-400 mt-4">
+                                    {language === 'en' ? 'Secure Payment via Stripe' : 'Paiement Sécurisé via Stripe'}
+                                </p>
                             </div>
                         </div>
 

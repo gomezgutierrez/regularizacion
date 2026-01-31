@@ -31,9 +31,9 @@ export function Footer() {
                     <div className="border-t border-slate-800 mt-8 pt-8 text-sm flex flex-col md:flex-row justify-between items-center gap-4">
                         <p>© 2026 Inmaculada Moncho Giner - All rights reserved.</p>
                         <div className="flex gap-4">
-                            <Link href="#" className="hover:text-white">Legal Notice</Link>
-                            <Link href="#" className="hover:text-white">Privacy Policy</Link>
-                            <Link href="#" className="hover:text-white">Terms of Service</Link>
+                            <Link href="/condiciones-contratacion" className="hover:text-white">Legal Notice</Link>
+                            <Link href="/condiciones-contratacion" className="hover:text-white">Privacy Policy</Link>
+                            <Link href="/condiciones-contratacion" className="hover:text-white">Terms of Service</Link>
                         </div>
                     </div>
                 </div>
@@ -63,9 +63,9 @@ export function Footer() {
                     <div className="border-t border-slate-800 mt-8 pt-8 text-sm flex flex-col md:flex-row justify-between items-center gap-4">
                         <p>© 2026 Inmaculada Moncho Giner - Tous droits réservés.</p>
                         <div className="flex gap-4">
-                            <Link href="#" className="hover:text-white">Mentions Légales</Link>
-                            <Link href="#" className="hover:text-white">Politique de Confidentialité</Link>
-                            <Link href="#" className="hover:text-white">CGV</Link>
+                            <Link href="/condiciones-contratacion" className="hover:text-white">Mentions Légales</Link>
+                            <Link href="/condiciones-contratacion" className="hover:text-white">Politique de Confidentialité</Link>
+                            <Link href="/condiciones-contratacion" className="hover:text-white">CGV</Link>
                         </div>
                     </div>
                 </div>
@@ -113,8 +113,8 @@ export function Footer() {
                         <p>© 2026 RegularizaciónYa. Titular: Inmaculada Moncho Giner - N.I.F.: 24376978Z</p>
                         <div className="flex gap-6">
                             <Link href="/condiciones-contratacion" className="hover:text-white">Términos y Condiciones</Link>
-                            <Link href="#" className="hover:text-white">Política de Privacidad</Link>
-                            <Link href="#" className="hover:text-white">Cookies</Link>
+                            <Link href="/condiciones-contratacion" className="hover:text-white">Política de Privacidad</Link>
+                            <Link href="/condiciones-contratacion" className="hover:text-white">Cookies</Link>
                         </div>
                     </div>
                 </div>
