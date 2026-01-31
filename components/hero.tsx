@@ -92,7 +92,7 @@ export function Hero() {
                                 <div className="bg-purple-50 p-4 rounded-xl border border-purple-100 flex items-start">
                                     <Scale className="w-5 h-5 text-purple-600 mr-3 flex-shrink-0 mt-1" />
                                     <p className="text-xs text-purple-900 leading-relaxed">
-                                        <strong>100% DEDUCIBLE:</strong> Si tras el estudio contratamos el trámite completo (350€), <span className="underline decoration-purple-400 decoration-2 underline-offset-2">te descontamos estos 39€</span>.
+                                        <strong>100% DEDUCIBLE:</strong> Si tras el estudio contratas el trámite completo (350€), <span className="underline decoration-purple-400 decoration-2 underline-offset-2">te descontamos estos 39€</span>.
                                     </p>
                                 </div>
                             </div>
