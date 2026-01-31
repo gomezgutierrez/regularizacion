@@ -13,10 +13,10 @@ export function BlogGrid() {
         },
         {
             title: "Cómo evitar la denegación de tu expediente",
-            excerpt: "Los 3 errores más comunes que cometen los solicitantes y cómo el estudio de viabilidad los previene.",
+            excerpt: "Los 3 errores más comunes y cómo el estudio de viabilidad es el primer paso para acceder a nuestra gestión integral garantizada.",
             icon: ShieldAlert,
             color: "bg-amber-100 text-amber-600",
-            href: "/guia-regularizacion-2026" // Fallback to guide as requested
+            href: "/guia-regularizacion-2026"
         },
         {
             title: "Novedades de la Reforma de Extranjería",

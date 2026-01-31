@@ -40,9 +40,14 @@ export function Hero() {
                             <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                         </a>
 
-                        <div className="flex items-center gap-2 text-sm font-medium text-slate-500 bg-white px-4 py-2 rounded-full shadow-sm border border-slate-100">
-                            <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                            Plazas limitadas por orden de pago
+                        <div className="flex flex-col gap-1">
+                            <div className="flex items-center gap-2 text-sm font-medium text-slate-500 bg-white px-4 py-2 rounded-full shadow-sm border border-slate-100 w-fit">
+                                <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                                Plazas limitadas por orden de pago
+                            </div>
+                            <p className="text-xs text-slate-500 ml-2 font-medium">
+                                * 100% deducible del trámite final (350€)
+                            </p>
                         </div>
                     </div>
 

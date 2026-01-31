@@ -105,7 +105,13 @@ export function InternationalLanding({
                                     {language === 'en' ? 'PAY FOR ELIGIBILITY STUDY - 39€' : "PAYER L'ÉTUDE DE FAISABILITÉ - 39€"}
                                 </a>
 
-                                <p className="text-xs text-slate-400 mt-4">
+                                <p className="text-xs text-slate-500 mt-3 font-medium">
+                                    {language === 'en'
+                                        ? '* 100% deductible from final service cost (350€)'
+                                        : '* 100% déductible du coût final du service (350€)'}
+                                </p>
+
+                                <p className="text-xs text-slate-400 mt-2">
                                     {language === 'en' ? 'Secure Payment via Stripe' : 'Paiement Sécurisé via Stripe'}
                                 </p>
                             </div>

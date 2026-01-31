@@ -4,8 +4,8 @@ import { InfoSection } from "@/components/info-section";
 import { AuthoritySection } from "@/components/authority-section";
 import { UrgencySection } from "@/components/urgency-banner";
 import { FinalCta } from "@/components/final-cta";
+import { IntegralServiceSection } from "@/components/integral-service-section";
 import { PricingSection } from "@/components/pricing-section";
-
 import { BlogGrid } from "@/components/blog-grid";
 
 export default function Home() {
@@ -17,6 +17,7 @@ export default function Home() {
       <BlogGrid />
       <InfoSection />
       <PricingSection />
+      <IntegralServiceSection />
       <AuthoritySection />
       <FinalCta />
 

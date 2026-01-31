@@ -62,6 +62,9 @@ export function PricingSection() {
                             PAGAR ESTUDIO DE VIABILIDAD - 39€
                             <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                         </a>
+                        <p className="text-xs text-center text-slate-500 mt-3 font-medium">
+                            * Importe 100% deducible del trámite final (350€)
+                        </p>
 
                         <p className="text-xs text-slate-500 mt-4">
                             Pago 100% seguro.
