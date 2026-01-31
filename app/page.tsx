@@ -7,12 +7,14 @@ import { FinalCta } from "@/components/final-cta";
 import { IntegralServiceSection } from "@/components/integral-service-section";
 import { PricingSection } from "@/components/pricing-section";
 import { BlogGrid } from "@/components/blog-grid";
+import { StepsSection } from "@/components/steps-section";
 
 export default function Home() {
   return (
     <main className="min-h-screen font-sans selection:bg-accent/30">
       <UrgencySection />
       <Hero />
+      <StepsSection />
       <VideoCtaSection />
       <BlogGrid />
       <InfoSection />

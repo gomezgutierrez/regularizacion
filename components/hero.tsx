@@ -16,38 +16,35 @@ export function Hero() {
                         Abogada Colegiada ICAV 14318
                     </div>
 
-                    <h1 className="text-4xl lg:text-7xl font-extrabold text-slate-900 leading-[1.1] mb-8 tracking-tight">
-                        Regularización Masiva 2026 <br />
+                    <h1 className="text-4xl lg:text-6xl font-extrabold text-slate-900 leading-[1.1] mb-6 tracking-tight">
+                        Tu Residencia en España 2026: <br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-                            Tu Trámite de Extranjería
+                            Gestión Profesional de Principio a Fin
                         </span>
                     </h1>
 
-                    <h2 className="text-2xl lg:text-3xl font-bold text-slate-800 mb-6">
-                        Presenta tu expediente con máximas garantías legales
+                    <h2 className="text-xl lg:text-2xl font-medium text-slate-600 mb-10 leading-relaxed max-w-3xl mx-auto">
+                        Como abogada colegiada (ICAV 14318), te acompaño en todo el proceso de regularización. Un servicio integral, transparente y sin sorpresas.
                     </h2>
 
-                    <p className="text-lg text-slate-600 mb-10 leading-relaxed max-w-2xl mx-auto">
-                        Evita errores comunes y denegaciones. Analizo tu caso bajo los criterios de la Reforma 2026 para asegurar que cada documento sea impecable antes de su presentación.
-                    </p>
-
-                    <div className="flex flex-col sm:flex-row items-center gap-4 w-full justify-center mb-12">
+                    <div className="flex flex-col items-center gap-4 w-full justify-center mb-12">
                         <a
                             href="https://buy.stripe.com/cNi7sEfpOg4oalw53f6Ri00"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="w-full sm:w-auto bg-accent hover:bg-accent/90 text-white text-lg font-bold py-5 px-10 rounded-full shadow-xl shadow-accent/20 transition-all transform hover:scale-105 flex items-center justify-center group"
                         >
-                            PAGAR ESTUDIO DE VIABILIDAD - 39€
+                            INICIAR ESTUDIO DE VIABILIDAD - 39€
                             <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                         </a>
 
-                        <div className="flex flex-col gap-2 max-w-xs text-left">
-                            <div className="inline-block bg-purple-100 text-purple-700 px-3 py-1 rounded-md text-xs font-bold border border-purple-200">
-                                ✨ 100% DEDUCIBLE DEL TRÁMITE FINAL
+                        <div className="bg-purple-50 px-6 py-3 rounded-xl border border-purple-100 flex flex-col md:flex-row items-center gap-2 text-center md:text-left mt-2 max-w-xl">
+                            <div className="bg-white p-1 rounded-full shadow-sm">
+                                <CheckCircle className="w-5 h-5 text-purple-600" />
                             </div>
-                            <p className="text-[11px] text-slate-500 leading-tight">
-                                Este pago se restará del coste total de tu gestión (350€), por lo que el estudio te sale gratis al formalizar tu proceso con nosotros.
+                            <p className="text-sm text-purple-900 leading-snug">
+                                <strong>Importe 100% deducible del trámite completo (350€).</strong><br />
+                                <span className="text-purple-700/80">Tu seguridad jurídica empieza aquí.</span>
                             </p>
                         </div>
                     </div>
