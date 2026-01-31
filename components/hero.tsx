@@ -1,7 +1,6 @@
-import { LeadForm } from "@/components/lead-form";
-import { ArrowRight, CheckCircle, Clock, FileText, Users } from "lucide-react";
+
+import { ArrowLeft, ArrowRight, ShieldCheck, CheckCircle } from "lucide-react";
 import { CaseCounter } from "@/components/case-counter";
-import Link from "next/link";
 
 export function Hero() {
     return (
@@ -10,42 +9,55 @@ export function Hero() {
             <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10" />
 
             <div className="container mx-auto px-4 lg:px-8">
-                <div className="flex flex-col lg:flex-row items-center gap-12 text-center lg:text-left">
+                <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
 
-                    <div className="flex-1 max-w-2xl">
-                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-100 text-amber-800 text-sm font-bold tracking-wide mb-8 border border-amber-200 animate-pulse shadow-sm">
-                            <span className="relative flex h-3 w-3">
-                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
-                                <span className="relative inline-flex rounded-full h-3 w-3 bg-amber-500"></span>
-                            </span>
-                            Plazo estimado de apertura: Abril 2026
-                        </div>
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 text-blue-800 text-sm font-bold tracking-wide mb-8 border border-blue-100 shadow-sm animate-in fade-in zoom-in duration-500">
+                        <ShieldCheck className="w-4 h-4" />
+                        Abogada Colegiada ICAV 14318 - Garantía de profesionalidad
+                    </div>
 
-                        <h1 className="text-4xl lg:text-6xl font-extrabold text-primary leading-[1.1] mb-6 tracking-tight">
-                            Todo sobre la Regularización Masiva 2026 <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-                                Tu Abogada Experta para Obtener tu Residencia
-                            </span>
-                        </h1>
+                    <h1 className="text-4xl lg:text-7xl font-extrabold text-slate-900 leading-[1.1] mb-8 tracking-tight">
+                        Regularización Masiva 2026 <br />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
+                            Tu Permiso de Residencia, Asegurado
+                        </span>
+                    </h1>
 
-                        <p className="text-lg lg:text-xl text-muted-foreground mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
-                            El Real Decreto abrirá una ventana única de 3 meses.
-                            <strong>Miles de solicitudes serán rechazadas por errores simples.</strong>
-                            No arriesgues tu futuro: prepárate con abogados colegiados.
-                        </p>
+                    <p className="text-lg lg:text-2xl text-slate-600 mb-10 leading-relaxed max-w-2xl mx-auto">
+                        La ventana de solicitud será breve y estricta.
+                        <br className="hidden md:block" />
+                        <strong>No arriesgues tu futuro con errores burocráticos.</strong>
+                    </p>
 
-                        <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 text-sm font-medium text-slate-600">
-                            <div className="flex items-center gap-2">
-                                <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                                Alta demanda de solicitudes
-                            </div>
-                            <CaseCounter />
+                    <div className="flex flex-col sm:flex-row items-center gap-4 w-full justify-center mb-12">
+                        <a
+                            href="https://buy.stripe.com/cNi7sEfpOg4oalw53f6Ri00"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-full sm:w-auto bg-accent hover:bg-accent/90 text-white text-lg font-bold py-5 px-10 rounded-full shadow-xl shadow-accent/20 transition-all transform hover:scale-105 flex items-center justify-center group"
+                        >
+                            PAGAR ESTUDIO DE VIABILIDAD - 39€
+                            <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                        </a>
+
+                        <div className="flex items-center gap-2 text-sm font-medium text-slate-500 bg-white px-4 py-2 rounded-full shadow-sm border border-slate-100">
+                            <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                            Plazas limitadas por orden de pago
                         </div>
                     </div>
 
-                    <div className="flex-1 w-full max-w-md lg:max-w-md relative">
-                        <div className="absolute -inset-4 bg-gradient-to-r from-primary/10 to-accent/10 rounded-3xl blur-2xl -z-10" />
-                        <LeadForm />
+                    <CaseCounter />
+
+                    <div className="mt-8 flex flex-wrap justify-center gap-x-8 gap-y-2 text-sm text-slate-500">
+                        <div className="flex items-center">
+                            <CheckCircle className="w-4 h-4 mr-2 text-green-500" /> Trámite 100% Online
+                        </div>
+                        <div className="flex items-center">
+                            <CheckCircle className="w-4 h-4 mr-2 text-green-500" /> Sin Cita Previa
+                        </div>
+                        <div className="flex items-center">
+                            <CheckCircle className="w-4 h-4 mr-2 text-green-500" /> Respuesta en 24h
+                        </div>
                     </div>
 
                 </div>

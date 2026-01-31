@@ -6,12 +6,15 @@ import { UrgencySection } from "@/components/urgency-banner";
 import { FinalCta } from "@/components/final-cta";
 import { PricingSection } from "@/components/pricing-section";
 
+import { BlogGrid } from "@/components/blog-grid";
+
 export default function Home() {
   return (
     <main className="min-h-screen font-sans selection:bg-accent/30">
       <UrgencySection />
       <Hero />
       <VideoCtaSection />
+      <BlogGrid />
       <InfoSection />
       <PricingSection />
       <AuthoritySection />

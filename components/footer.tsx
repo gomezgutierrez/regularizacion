@@ -20,7 +20,7 @@ export function Footer() {
                             <p className="max-w-md text-sm">
                                 Online legal services provided by Inmaculada Moncho.
                                 <br />
-                                <strong>Registered Lawyer No. 6835 - ICALI</strong>
+                                <strong>Registered Lawyer No. 14318 - ICAV</strong>
                             </p>
                         </div>
                         <div className="bg-white/5 p-2 rounded-xl">
@@ -52,7 +52,7 @@ export function Footer() {
                             <p className="max-w-md text-sm">
                                 Services juridiques en ligne fournis par Inmaculada Moncho.
                                 <br />
-                                <strong>Avocate Inscrite Nº 6835 - ICALI</strong>
+                                <strong>Avocate Inscrite Nº 14318 - ICAV</strong>
                             </p>
                         </div>
                         <div className="bg-white/5 p-2 rounded-xl">
