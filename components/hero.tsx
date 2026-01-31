@@ -1,5 +1,5 @@
 
-import { ArrowLeft, ArrowRight, ShieldCheck, CheckCircle } from "lucide-react";
+import { ArrowLeft, ArrowRight, ShieldCheck, CheckCircle, Check, Scale } from "lucide-react";
 import { CaseCounter } from "@/components/case-counter";
 
 export function Hero() {
@@ -45,16 +45,6 @@ export function Hero() {
                                 INICIAR ESTUDIO DE VIABILIDAD - 39€
                                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                             </a>
-
-                            <div className="bg-purple-50 px-6 py-3 rounded-xl border border-purple-100 flex flex-col md:flex-row items-center gap-2 text-center md:text-left mt-2 max-w-xl">
-                                <div className="bg-white p-1 rounded-full shadow-sm">
-                                    <CheckCircle className="w-5 h-5 text-purple-600" />
-                                </div>
-                                <p className="text-sm text-purple-900 leading-snug">
-                                    <strong>Importe 100% deducible del trámite completo (350€).</strong><br />
-                                    <span className="text-purple-700/80">Tu seguridad jurídica empieza aquí.</span>
-                                </p>
-                            </div>
                         </div>
 
                         <div className="flex flex-wrap justify-center lg:justify-start gap-x-8 gap-y-2 text-sm text-slate-500">
@@ -70,57 +60,78 @@ export function Hero() {
                         </div>
                     </div>
 
-                    {/* Right Column: Pricing Card (Moved from PricingSection) */}
+                    {/* Right Column: Pricing Card (Exact Replica) */}
                     <div className="w-full">
                         <div className="bg-white rounded-3xl shadow-2xl overflow-hidden border border-slate-200 flex flex-col md:flex-row">
                             {/* Left side of Card: Features */}
-                            <div className="p-6 md:p-8 md:w-3/5 flex flex-col justify-center bg-white">
-                                <h3 className="text-xl font-bold text-slate-900 mb-2">Estudio de Viabilidad</h3>
-                                <p className="text-accent font-bold mb-4 text-sm">Regularización 2026</p>
+                            <div className="p-6 md:p-8 md:w-3/5 flex flex-col justify-between bg-white relative z-10">
+                                <div>
+                                    <h3 className="text-xl font-bold text-slate-900 mb-1">Estudio de Viabilidad</h3>
+                                    <p className="text-[#E91E63] font-bold mb-6 text-sm">Regularización 2026</p>
 
-                                <ul className="space-y-3 mb-4 text-sm">
-                                    <li className="flex items-start">
-                                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                                        <span className="text-slate-600">Análisis documental previo</span>
-                                    </li>
-                                    <li className="flex items-start">
-                                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                                        <span className="text-slate-600">Cumplimiento requisitos ROEX</span>
-                                    </li>
-                                    <li className="flex items-start">
-                                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                                        <span className="text-slate-600">Informe de vías disponibles</span>
-                                    </li>
-                                    <li className="flex items-start">
-                                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                                        <span className="text-slate-600">Hoja de ruta personalizada</span>
-                                    </li>
-                                </ul>
+                                    <ul className="space-y-4 mb-8 text-sm">
+                                        <li className="flex items-start">
+                                            <Check className="w-5 h-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
+                                            <span className="text-slate-600">Análisis documental previo (Empadronamiento, etc.)</span>
+                                        </li>
+                                        <li className="flex items-start">
+                                            <Check className="w-5 h-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
+                                            <span className="text-slate-600">Confirmación de cumplimiento de requisitos ROEX</span>
+                                        </li>
+                                        <li className="flex items-start">
+                                            <Check className="w-5 h-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
+                                            <span className="text-slate-600">Informe de vías disponibles para tu perfil</span>
+                                        </li>
+                                        <li className="flex items-start">
+                                            <Check className="w-5 h-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
+                                            <span className="text-slate-600">Hoja de ruta personalizada y plazos</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div className="bg-purple-50 p-4 rounded-xl border border-purple-100 flex items-start">
+                                    <Scale className="w-5 h-5 text-purple-600 mr-3 flex-shrink-0 mt-1" />
+                                    <p className="text-xs text-purple-900 leading-relaxed">
+                                        <strong>100% DEDUCIBLE:</strong> Si tras el estudio contratamos el trámite completo (350€), <span className="underline decoration-purple-400 decoration-2 underline-offset-2">te descontamos estos 39€</span>.
+                                    </p>
+                                </div>
                             </div>
 
                             {/* Right side of Card: Dark Offers */}
-                            <div className="bg-slate-900 p-6 md:p-8 md:w-2/5 flex flex-col justify-center text-center relative overflow-hidden text-white">
-                                <div className="absolute top-0 right-0 bg-accent text-white text-[10px] font-bold px-2 py-1 rounded-bl-lg">
+                            <div className="bg-[#0f172a] p-6 md:p-8 md:w-2/5 flex flex-col justify-center text-center relative overflow-hidden text-white">
+                                <div className="absolute top-0 right-0 bg-[#E91E63] text-white text-[10px] font-bold px-3 py-1 rounded-bl-lg">
                                     POPULAR
                                 </div>
-                                <div className="text-slate-400 text-xs font-medium mb-1 uppercase tracking-wide">Servicio Integral</div>
-                                <div className="text-4xl font-bold text-white mb-1">350€</div>
-                                <div className="text-slate-400 text-[10px] mb-4">IVA Incluido</div>
 
-                                <ul className="text-left space-y-2 mb-6 text-[11px] text-slate-300 hidden md:block">
-                                    <li className="flex items-start"><CheckCircle className="w-3 h-3 text-accent mr-1 mt-0.5" /> <span>Análisis incluido</span></li>
-                                    <li className="flex items-start"><CheckCircle className="w-3 h-3 text-accent mr-1 mt-0.5" /> <span>Preparación y registro</span></li>
-                                    <li className="flex items-start"><CheckCircle className="w-3 h-3 text-accent mr-1 mt-0.5" /> <span>Recurso incluido</span></li>
+                                <div className="text-slate-400 text-xs font-medium mb-1 uppercase tracking-wide mt-2">Servicio Integral</div>
+                                <div className="text-5xl font-bold text-white mb-2">350€</div>
+                                <div className="text-slate-400 text-[10px] mb-6">IVA Incluido</div>
+
+                                <ul className="text-left space-y-3 mb-8 text-[11px] text-slate-300 hidden md:block pl-2">
+                                    <li className="flex items-start"><Check className="w-3 h-3 text-[#E91E63] mr-2 mt-0.5" /> <span>Análisis de viabilidad (incluido)</span></li>
+                                    <li className="flex items-start"><Check className="w-3 h-3 text-[#E91E63] mr-2 mt-0.5" /> <span>Preparación y presentación</span></li>
+                                    <li className="flex items-start"><Check className="w-3 h-3 text-[#E91E63] mr-2 mt-0.5" /> <span>Respuesta a requerimientos</span></li>
+                                    <li className="flex items-start"><Check className="w-3 h-3 text-[#E91E63] mr-2 mt-0.5" /> <span>Recurso de Reposición incluido</span></li>
                                 </ul>
 
                                 <a
                                     href="https://buy.stripe.com/cNi7sEfpOg4oalw53f6Ri00"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="w-full bg-accent hover:bg-accent/90 text-white font-bold py-3 rounded-lg shadow-lg text-sm transition-transform hover:scale-105"
+                                    className="w-full bg-[#E91E63] hover:bg-[#d81b60] text-white font-bold py-3 rounded-xl shadow-lg shadow-pink-900/20 transition-all transform hover:scale-[1.02] flex items-center justify-center group"
                                 >
-                                    INICIAR
+                                    INICIAR POR 39€
+                                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                                 </a>
+                                <p className="text-[10px] text-center text-slate-500 mt-3 font-medium">
+                                    * Pagas 39€ hoy y el resto al tramitar.
+                                </p>
+
+                                <p className="text-[10px] text-slate-600 mt-4 leading-tight">
+                                    Pago 100% seguro.
+                                    <br />
+                                    Servicio prestado por Inmaculada Moncho (ICAV 14318).
+                                </p>
                             </div>
                         </div>
                     </div>
