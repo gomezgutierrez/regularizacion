@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { LawyerSignature } from "./lawyer-signature";
 
@@ -80,9 +81,21 @@ export function Footer() {
 
                 <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
                     <div>
-                        <h2 className="text-2xl font-bold text-white mb-6">
-                            RegularizaciónYa.es
-                        </h2>
+                        <Link href="/" className="inline-block mb-6">
+                            <Image
+                                src="/Logo_Claim_Blanco_Fem_S.png"
+                                alt="Regularización 2026"
+                                width={240}
+                                height={80}
+                                className="h-16 w-auto object-contain"
+                            />
+                            {/* Note: The logo filename says 'Blanco' but usually strict white logos don't need invert. 
+                                 However, if it's not perfectly white, 'brightness-0 invert' ensures it is white. 
+                                 Since the file is named Blanco, I will assume it is white and remove the filter, 
+                                 but kept the class structure just in case. 
+                                 Actually, I will remove the filter to trust the file name. 
+                             */}
+                        </Link>
                         <p className="text-lg mb-6 leading-relaxed text-slate-400">
                             La primera plataforma de gestión telemática masiva para la regularización de extranjeros en España 2026.
                             Sin citas previas. Sin desplazamientos. 100% Online.

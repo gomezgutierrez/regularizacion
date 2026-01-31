@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X, Phone, Globe } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -34,8 +35,16 @@ export function SiteHeader() {
             <div className="container mx-auto px-4 h-16 flex items-center justify-between">
 
                 {/* --- Logo --- */}
-                <Link href="/" className="font-bold text-xl text-slate-900 hover:opacity-80 transition-opacity z-50" onClick={closeMenu}>
-                    Regularización<span className="text-accent">2026</span>
+                {/* --- Logo --- */}
+                <Link href="/" className="hover:opacity-80 transition-opacity z-50" onClick={closeMenu}>
+                    <Image
+                        src="/Logo_Claim_Color_Fem_S.png"
+                        alt="Regularización 2026 - Abogada Inmaculada Moncho"
+                        width={200}
+                        height={60}
+                        className="h-12 w-auto object-contain"
+                        priority
+                    />
                 </Link>
 
                 {/* --- DESKTOP NAV --- */}
