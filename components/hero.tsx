@@ -13,13 +13,13 @@ export function Hero() {
 
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 text-blue-800 text-sm font-bold tracking-wide mb-8 border border-blue-100 shadow-sm animate-in fade-in zoom-in duration-500">
                         <ShieldCheck className="w-4 h-4" />
-                        Abogada Colegiada ICAV 14318 - Garantía de profesionalidad
+                        Abogada Colegiada ICAV 14318
                     </div>
 
                     <h1 className="text-4xl lg:text-7xl font-extrabold text-slate-900 leading-[1.1] mb-8 tracking-tight">
-                        Abogada Extranjería Valencia <br />
+                        Regularización Masiva 2026 <br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-                            Regularización 2026
+                            Tu Trámite de Extranjería
                         </span>
                     </h1>
 
