@@ -38,7 +38,7 @@ const jsonLd = {
   "name": "Inmaculada Moncho - Abogado Extranjería Online",
   "image": "https://regularizacionmasiva.es/logo.png",
   "url": "https://regularizacionmasiva.es",
-  "telephone": "+34624945297",
+  "telephone": "+34642717109",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Valencia",

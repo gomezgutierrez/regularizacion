@@ -15,16 +15,9 @@ export function FinalCta() {
                 </p>
 
                 <a
-                    href="https://wa.me/34624945297"
+                    href="https://wa.me/34642717109"
                     target="_blank"
                     rel="noopener noreferrer"
-                    onClick={() => {
-                        fetch('/api/track-whatsapp', {
-                            method: 'POST',
-                            body: JSON.stringify({ originUrl: window.location.href }),
-                            keepalive: true
-                        }).catch(console.error);
-                    }}
                     className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full text-lg shadow-lg hover:shadow-green-500/20 transition-all transform hover:-translate-y-1"
                 >
                     <MessageCircle className="w-6 h-6" />

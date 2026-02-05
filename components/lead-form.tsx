@@ -194,14 +194,7 @@ export function LeadForm({ className, language = "es" }: LeadFormProps) {
         const data = getValues();
         const message = `REVISIÓN 2026 [${language.toUpperCase()}]:%0A%0A- Nombre: ${data.name}%0A- País: ${data.origin}%0A- WhatsApp: ${data.whatsApp}%0A- Entrada antes de 2026: SÍ`;
 
-        // Track in Jira (Non-blocking)
-        fetch('/api/track-whatsapp', {
-            method: 'POST',
-            body: JSON.stringify({ originUrl: window.location.href }),
-            keepalive: true
-        }).catch(err => console.error(err));
-
-        window.open(`https://wa.me/34624945297?text=${message}`, '_blank');
+        window.open(`https://wa.me/34642717109?text=${message}`, '_blank');
     };
 
     // --- Success View ---

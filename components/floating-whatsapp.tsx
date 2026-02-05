@@ -23,16 +23,9 @@ export function FloatingWhatsApp() {
 
     return (
         <a
-            href={`https://wa.me/34624945297?text=${encodedMessage}`}
+            href={`https://wa.me/34642717109?text=${encodedMessage}`}
             target="_blank"
             rel="noopener noreferrer"
-            onClick={() => {
-                fetch('/api/track-whatsapp', {
-                    method: 'POST',
-                    body: JSON.stringify({ originUrl: window.location.href }),
-                    keepalive: true
-                }).catch(console.error);
-            }}
             className="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-5 rounded-full shadow-2xl transition-all transform hover:scale-105 animate-in fade-in slide-in-from-bottom-4 duration-500"
             aria-label="Contactar por WhatsApp"
         >
