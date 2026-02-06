@@ -1,0 +1,189 @@
+import type { Metadata } from "next";
+import { ShieldAlert, CheckCircle, ArrowRight, FileText, AlertTriangle, ChevronRight } from "lucide-react";
+import { LeadForm } from "@/components/lead-form";
+import { AuthorBio } from "@/components/author-bio";
+
+export const metadata: Metadata = {
+    title: "Guía Completa sobre Antecedentes Penales para la Regularización 2026",
+    description: "La guía definitiva para entender y cancelar antecedentes penales y policiales antes de solicitar tu regularización en 2026. Evita denegaciones.",
+    alternates: {
+        canonical: "/blog/guia-antecedentes-penales-2026",
+    },
+};
+
+export default function GuiaPenales() {
+    return (
+        <main className="min-h-screen bg-slate-50 py-12">
+            <div className="container mx-auto px-4 max-w-5xl flex flex-col lg:flex-row gap-12">
+
+                <article className="lg:w-2/3 bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-slate-100 prose prose-lg prose-slate max-w-none">
+
+                    <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 mb-6 leading-tight">
+                        Guía Completa sobre Antecedentes Penales para la Regularización 2026
+                    </h1>
+
+                    <p className="lead text-xl text-slate-600 mb-8">
+                        El éxito de una solicitud de residencia en España no depende solo de cumplir los años de permanencia; el pilar fundamental que sostiene cualquier expediente de extranjería es la seguridad jurídica. En este sentido, el certificado de antecedentes penales no es un simple trámite burocrático, sino el documento que valida tu aptitud legal para residir en el país.
+                    </p>
+
+                    {/* Índice de Contenidos */}
+                    <div className="bg-slate-50 p-6 rounded-xl border border-slate-200 mb-8 not-prose">
+                        <h4 className="font-bold text-slate-900 mb-4 flex items-center">
+                            <FileText className="w-5 h-5 mr-2 text-primary" />
+                            Índice de Contenidos
+                        </h4>
+                        <nav className="flex flex-col gap-2 text-sm text-slate-700">
+                            <a href="#evaluacion" className="hover:text-primary hover:underline flex items-start">
+                                <ChevronRight className="w-4 h-4 mr-1 mt-0.5 text-slate-400" />
+                                1. ¿Qué evalúa realmente la Oficina de Extranjería?
+                            </a>
+                            <a href="#apostilla" className="hover:text-primary hover:underline flex items-start">
+                                <ChevronRight className="w-4 h-4 mr-1 mt-0.5 text-slate-400" />
+                                2. El Certificado del País de Origen: La importancia de la Apostilla
+                            </a>
+                            <a href="#caducidad" className="hover:text-primary hover:underline flex items-start">
+                                <ChevronRight className="w-4 h-4 mr-1 mt-0.5 text-slate-400" />
+                                3. La Caducidad: El factor tiempo
+                            </a>
+                            <a href="#diferencia" className="hover:text-primary hover:underline flex items-start font-semibold text-primary">
+                                <ChevronRight className="w-4 h-4 mr-1 mt-0.5 text-primary" />
+                                4. Antecedentes Penales vs. Antecedentes Policiales
+                            </a>
+                            <a href="#ultimos-5-anos" className="hover:text-primary hover:underline flex items-start">
+                                <ChevronRight className="w-4 h-4 mr-1 mt-0.5 text-slate-400" />
+                                5. Los antecedentes de los últimos 5 años
+                            </a>
+                            <a href="#consecuencias" className="hover:text-primary hover:underline flex items-start">
+                                <ChevronRight className="w-4 h-4 mr-1 mt-0.5 text-slate-400" />
+                                6. Consecuencias de una presentación incorrecta
+                            </a>
+                        </nav>
+                    </div>
+
+                    <h2 id="evaluacion" className="scroll-mt-24">1. ¿Qué evalúa realmente la Oficina de Extranjería?</h2>
+                    <p>
+                        Cuando presentas tu solicitud para la Regularización 2026, la Administración española busca confirmar que no representas una amenaza para la seguridad pública. Para ello, analizan dos vertientes:
+                    </p>
+                    <ul>
+                        <li><strong>La conducta en el país de origen:</strong> A través del certificado internacional.</li>
+                        <li><strong>La conducta en España:</strong> A través del Registro Central de Penados.</li>
+                    </ul>
+                    <p>
+                        Es importante entender que Extranjería no solo mira si has cumplido condena, sino el tipo de delito y la vigencia de la responsabilidad penal.
+                    </p>
+
+                    <h2 id="apostilla" className="scroll-mt-24">2. El Certificado del País de Origen: La importancia de la Apostilla</h2>
+                    <p>
+                        Este es el punto donde más expedientes fallan. No basta con tener el documento; debe ser legalmente válido en España.
+                    </p>
+                    <ul>
+                        <li><strong>Países del Convenio de la Haya:</strong> El documento debe llevar la Apostilla de la Haya. Sin este sello, el documento no existe legalmente para España.</li>
+                        <li><strong>Países fuera del Convenio:</strong> Requieren una legalización vía diplomática (Ministerio de Exteriores del país de origen y Consulado de España).</li>
+                        <li><strong>Traducción Jurada:</strong> Si tu certificado no está en castellano, debe ser traducido por un traductor jurado autorizado por el MAEC. Una traducción simple será motivo de denegación.</li>
+                    </ul>
+
+                    <h2 id="caducidad" className="scroll-mt-24">3. La Caducidad: El factor tiempo</h2>
+                    <p>
+                        El certificado de antecedentes penales es un documento con una "vida útil" muy corta.
+                    </p>
+                    <ul>
+                        <li><strong>Regla general:</strong> Tienen una vigencia de 90 días, a menos que el documento indique expresamente otra cosa (algunos países marcan 3 o 6 meses).</li>
+                        <li><strong>El riesgo del envío:</strong> Si solicitas el certificado en tu país demasiado pronto y tarda en llegar por correo, es posible que cuando vayas a presentar tu regularización ya esté caducado.</li>
+                    </ul>
+
+                    {/* Text Link CTA */}
+                    <div className="my-8 p-4 bg-primary/5 rounded-lg border-l-4 border-primary text-sm not-prose">
+                        <p className="m-0 text-slate-700">
+                            ¿Tienes dudas sobre la validez de tus documentos? <a href="#contacto" className="text-primary font-bold hover:underline">Consulta con nuestro equipo legal</a> antes de presentar nada.
+                        </p>
+                    </div>
+
+                    <h2 id="diferencia" className="scroll-mt-24">4. Antecedentes Penales vs. Antecedentes Policiales</h2>
+                    <p>Este es un matiz técnico que genera mucha confusión y muchas denegaciones inesperadas:</p>
+
+                    {/* Highlight Box */}
+                    <div className="bg-yellow-50 border-2 border-yellow-200 p-6 rounded-xl my-8 not-prose shadow-sm">
+                        <div className="flex items-start gap-4">
+                            <div className="p-3 bg-yellow-100 rounded-full shrink-0 text-yellow-700">
+                                <AlertTriangle className="w-6 h-6" />
+                            </div>
+                            <div>
+                                <h3 className="text-lg font-bold text-yellow-900 mt-0 mb-3">Diferencia Crítica</h3>
+                                <p className="text-slate-800 mb-4 text-sm leading-relaxed">
+                                    <strong className="block mb-1 text-slate-900">Antecedentes Penales:</strong> Aparecen tras una sentencia firme de un juez.
+                                </p>
+                                <hr className="border-yellow-200 my-3" />
+                                <p className="text-slate-800 text-sm leading-relaxed">
+                                    <strong className="block mb-1 text-slate-900">Antecedentes Policiales (PERCUP):</strong>
+                                    Son registros de detenciones o investigaciones de la Policía Nacional o Guardia Civil.
+                                </p>
+                                <div className="mt-4 bg-white/50 p-4 rounded-lg text-sm text-yellow-900 italic font-medium">
+                                    ¿Por qué es crítico? Porque aunque un juez te haya declarado inocente o haya archivado tu caso, el antecedente policial permanece activo. Extranjería tiene acceso a estas bases y puede denegar la residencia alegando falta de "buena conducta".
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 id="ultimos-5-anos" className="scroll-mt-24">5. Los antecedentes de los últimos 5 años</h2>
+                    <p>
+                        La normativa suele exigir el historial de los últimos 5 años de residencia. Si has vivido en varios países en ese periodo, es posible que necesites certificados de cada uno de ellos. Este análisis previo es lo que determina si un expediente es "limpio" o si requiere una estrategia jurídica específica antes de ser enviado.
+                    </p>
+
+                    <h2 id="consecuencias" className="scroll-mt-24">6. Consecuencias de una presentación incorrecta</h2>
+                    <p>
+                        Presentar un certificado con antecedentes activos o mal legalizado no solo conlleva la denegación. También implica:
+                    </p>
+                    <ul>
+                        <li><strong>Pérdida de las tasas pagadas.</strong></li>
+                        <li><strong>Anotación en tu expediente:</strong> Una denegación por antecedentes queda registrada y dificulta enormemente cualquier solicitud posterior.</li>
+                        <li><strong>Riesgo de expulsión:</strong> Al notificar tu situación y ser denegada por motivos penales, te sitúas en el radar de la administración con una valoración negativa.</li>
+                    </ul>
+
+                    <div className="bg-slate-900 rounded-2xl p-8 my-12 text-center shadow-2xl relative overflow-hidden not-prose">
+                        <div className="relative z-10">
+                            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                                🚀 Asegura tu futuro con una gestión profesional
+                            </h3>
+                            <p className="text-slate-300 text-lg mb-8 max-w-2xl mx-auto">
+                                La regularización de 2026 es una oportunidad única. No dejes que un error de forma en tus antecedentes eche a perder años de espera en España.
+                            </p>
+
+                            <a
+                                href="https://buy.stripe.com/5kA0118t0eFP7wQ3cc"
+                                className="inline-flex items-center justify-center bg-green-500 hover:bg-green-600 text-white font-bold text-lg py-4 px-8 rounded-full shadow-lg hover:shadow-green-500/20 transition-all transform hover:-translate-y-1 w-full sm:w-auto"
+                            >
+                                INICIAR PROCEDIMIENTO DE REGULARIZACIÓN - 39€
+                            </a>
+                            <p className="text-slate-400 text-xs mt-4">
+                                Realizamos un análisis profesional de tu situación documental para que presentes tu expediente con total seguridad. Este pago inicial se descuenta de la gestión completa (350€).
+                            </p>
+                        </div>
+                    </div>
+
+                    <hr className="my-12 border-slate-200" />
+
+                    <AuthorBio />
+
+                    <div className="mt-8 pt-8 border-t border-slate-100 text-center text-sm text-slate-500">
+                        <p className="italic">Contenido redactado y supervisado por el equipo legal de Inmaculada Moncho, Colegiada ICAV 14318</p>
+                    </div>
+
+                </article>
+
+                <aside className="lg:w-1/3" id="contacto">
+                    <div className="sticky top-8 space-y-8">
+                        <div className="bg-white p-6 rounded-2xl shadow-lg border border-slate-200 text-center">
+                            <CheckCircle className="w-12 h-12 text-green-500 mx-auto mb-4" />
+                            <h3 className="text-xl font-bold text-slate-900 mb-2">Limpiamos tu expediente</h3>
+                            <p className="text-slate-600 mb-6 text-sm">
+                                Si tienes dudas sobre si constan antecedentes, podemos averiguarlo y cancelarlos por ti antes de la regularización.
+                            </p>
+                            <LeadForm />
+                        </div>
+                    </div>
+                </aside>
+
+            </div>
+        </main>
+    );
+}
