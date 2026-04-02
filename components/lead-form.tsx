@@ -194,7 +194,7 @@ export function LeadForm({ className, language = "es" }: LeadFormProps) {
         const data = getValues();
         const message = `REVISIÓN 2026 [${language.toUpperCase()}]:%0A%0A- Nombre: ${data.name}%0A- País: ${data.origin}%0A- WhatsApp: ${data.whatsApp}%0A- Entrada antes de 2026: SÍ`;
 
-        window.open(`https://wa.me/34642717109?text=${message}`, '_blank');
+        window.open(`https://wa.me/34614731773?text=${message}`, '_blank');
     };
 
     // --- Success View ---

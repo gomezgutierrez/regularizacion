@@ -97,8 +97,7 @@ export default function GuiaPenales() {
                         El éxito de una solicitud de residencia en España no depende solo de cumplir los años de permanencia; el pilar fundamental que sostiene cualquier expediente de extranjería es la seguridad jurídica. En este sentido, el certificado de antecedentes penales no es un simple trámite burocrático, sino el documento que valida tu aptitud legal para residir en el país.
                     </p>
 
-                    {/* Índice de Contenidos Sticky */}
-                    <div className="bg-slate-50 p-6 rounded-xl border border-slate-200 mb-8 not-prose lg:sticky lg:top-8 z-10 shadow-sm">
+                    <div className="bg-slate-50 p-6 rounded-xl border border-slate-200 mb-8 not-prose shadow-sm">
                         <h4 className="font-bold text-slate-900 mb-4 flex items-center">
                             <FileText className="w-5 h-5 mr-2 text-primary" />
                             Índice de Contenidos
