@@ -106,6 +106,12 @@ export default function RootLayout({
           `}
         </Script>
 
+        {/* TikTok Embed Script - Global */}
+        <Script
+          src="https://www.tiktok.com/embed.js"
+          strategy="afterInteractive"
+        />
+
 
 
 

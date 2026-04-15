@@ -69,15 +69,14 @@ export default function BlogPost90DiasVideo() {
                     <div className="relative w-full max-w-[340px] md:max-w-[400px] rounded-2xl overflow-hidden shadow-2xl border-4 border-slate-900 bg-black">
                         <blockquote
                             className="tiktok-embed"
-                            cite="https://www.tiktok.com/@abogadoextranjeriaonline/video/7600044602241846550"
-                            data-video-id="7600044602241846550"
+                            cite="https://www.tiktok.com/@abogadoextranjeriaonline/video/7495914945484852502"
+                            data-video-id="7495914945484852502"
                             style={{ maxWidth: "605px", minWidth: "325px" }}
                         >
                             <section>
                                 <a target="_blank" title="@abogadoextranjeriaonline" href="https://www.tiktok.com/@abogadoextranjeriaonline?refer=embed">@abogadoextranjeriaonline</a>
                             </section>
                         </blockquote>
-                        <script async src="https://www.tiktok.com/embed.js"></script>
                     </div>
                 </div>
 

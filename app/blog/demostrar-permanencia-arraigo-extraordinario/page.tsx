@@ -34,6 +34,22 @@ export default function BlogPostPermanencia() {
                         La aprobación definitiva del <strong>Real Decreto 316/2026 (BOE)</strong> introduce el "Arraigo Extraordinario", el cual permite obtener autorización de residencia y trabajo exprés. Uno de los requisitos más técnicos y estrictos es demostrar la <strong>permanencia ininterrumpida en España</strong>.
                     </p>
 
+                    {/* TikTok Embed */}
+                    <div className="mb-12 flex justify-center not-prose">
+                        <div className="relative w-full max-w-[340px] md:max-w-[400px] rounded-2xl overflow-hidden shadow-2xl border-4 border-slate-900 bg-black">
+                            <blockquote
+                                className="tiktok-embed"
+                                cite="https://www.tiktok.com/@abogadoextranjeriaonline/video/7600044602241846550"
+                                data-video-id="7600044602241846550"
+                                style={{ maxWidth: "605px", minWidth: "325px" }}
+                            >
+                                <section>
+                                    <a target="_blank" title="@abogadoextranjeriaonline" href="https://www.tiktok.com/@abogadoextranjeriaonline?refer=embed">@abogadoextranjeriaonline</a>
+                                </section>
+                            </blockquote>
+                        </div>
+                    </div>
+
                     <h2 className="text-2xl font-bold text-slate-900 mb-4 mt-8 flex items-center">
                         <CalendarDays className="w-6 h-6 text-primary mr-2" /> El doble requisito temporal: 2026 y 5 meses
                     </h2>

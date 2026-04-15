@@ -37,6 +37,22 @@ export default function BlogPostErrores() {
                         La nueva vía del <strong>Arraigo Extraordinario</strong> es una oportunidad histórica, pero la oficina de Extranjería no perdona errores. Un pequeño fallo burocrático puede paralizar tu expediente de residencia y hacerte perder el plazo final del 30 de junio de 2026.
                     </p>
 
+                    {/* TikTok Embed */}
+                    <div className="mb-12 flex justify-center not-prose">
+                        <div className="relative w-full max-w-[340px] md:max-w-[400px] rounded-2xl overflow-hidden shadow-2xl border-4 border-slate-900 bg-black">
+                            <blockquote
+                                className="tiktok-embed"
+                                cite="https://www.tiktok.com/@abogadoextranjeriaonline/video/7600044602241846550"
+                                data-video-id="7600044602241846550"
+                                style={{ maxWidth: "605px", minWidth: "325px" }}
+                            >
+                                <section>
+                                    <a target="_blank" title="@abogadoextranjeriaonline" href="https://www.tiktok.com/@abogadoextranjeriaonline?refer=embed">@abogadoextranjeriaonline</a>
+                                </section>
+                            </blockquote>
+                        </div>
+                    </div>
+
                     <h2 className="text-2xl font-bold text-slate-900 mb-4 mt-8 flex items-center">
                         <AlertTriangle className="w-6 h-6 text-red-500 mr-2" /> Error 1: Presentar Antecedentes Penales Caducados
                     </h2>

@@ -24,6 +24,22 @@ export default function ArticleAsilo() {
                         Miles de personas en España están atrapadas en el limbo de la solicitud de Asilo. La Regularización Extraordinaria ("Ventanilla Única") es la vía de escape legal más segura.
                     </p>
 
+                    {/* TikTok Embed */}
+                    <div className="mb-12 flex justify-center not-prose">
+                        <div className="relative w-full max-w-[340px] md:max-w-[400px] rounded-2xl overflow-hidden shadow-2xl border-4 border-slate-900 bg-black">
+                            <blockquote
+                                className="tiktok-embed"
+                                cite="https://www.tiktok.com/@abogadoextranjeriaonline/video/7495913224343751958"
+                                data-video-id="7495913224343751958"
+                                style={{ maxWidth: "605px", minWidth: "325px" }}
+                            >
+                                <section>
+                                    <a target="_blank" title="@abogadoextranjeriaonline" href="https://www.tiktok.com/@abogadoextranjeriaonline?refer=embed">@abogadoextranjeriaonline</a>
+                                </section>
+                            </blockquote>
+                        </div>
+                    </div>
+
                     <div className="bg-green-50 border-l-4 border-green-500 p-6 my-8 not-prose">
                         <h3 className="font-bold text-green-900 flex items-center gap-2 mb-2">
                             <ShieldCheck className="w-5 h-5" />

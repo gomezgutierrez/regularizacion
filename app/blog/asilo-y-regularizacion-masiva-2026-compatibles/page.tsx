@@ -49,7 +49,6 @@ export default function BlogPostAsilo() {
                                 <a target="_blank" title="@abogadoextranjeriaonline" href="https://www.tiktok.com/@abogadoextranjeriaonline?refer=embed">@abogadoextranjeriaonline</a>
                             </section>
                         </blockquote>
-                        <script async src="https://www.tiktok.com/embed.js"></script>
                     </div>
                 </div>
 
