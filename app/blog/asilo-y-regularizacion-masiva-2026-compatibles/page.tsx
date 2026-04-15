@@ -89,7 +89,6 @@ export default function BlogPostAsilo() {
                                 <strong>La regla de oro del Real Decreto:</strong> Puedes solicitar el arraigo sin dar de baja tu asilo. Solo tendrás que desistir oficialmente del asilo <span className="underline">cuando tu regularización sea aprobada favorablemente</span>. Nunca antes.
                             </p>
                         </div>
-                    </div>
 
                     <div className="bg-amber-50 border-l-4 border-amber-400 p-6 rounded-r-xl">
                         <h4 className="font-bold text-amber-900 flex items-center mb-2">
