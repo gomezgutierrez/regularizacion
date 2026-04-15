@@ -1,3 +1,5 @@
+"use client";
+
 import { MessageCircle, Award } from "lucide-react";
 import { useWhatsApp } from "@/contexts/whatsapp-context";
 

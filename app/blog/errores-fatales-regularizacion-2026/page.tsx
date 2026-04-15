@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, AlertTriangle, XCircle, CheckCircle2 } from "lucide-react";
 import { RelatedPosts } from "@/components/related-posts";
-import { useWhatsApp } from "@/contexts/whatsapp-context";
+import { WhatsAppButton } from "@/components/whatsapp-button";
 
 export const metadata: Metadata = {
     title: "5 Errores Fatales al Solicitar la Regularización 2026 | Abogados Extranjería",
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 export default function BlogPostErrores() {
-    const { openWhatsApp } = useWhatsApp();
+
 
     return (
         <main className="min-h-screen bg-slate-50 font-sans">
@@ -80,12 +80,12 @@ export default function BlogPostErrores() {
                             La ventaja de hacer las cosas bien a la primera es que <strong>nada más comunicar el inicio del trámite, obtienes permiso provisional para trabajar legalmente</strong>.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4">
-                             <button 
-                                onClick={() => openWhatsApp("Hola, deseo recibir asesoramiento e iniciar mi trámite de Regularización Extraordinaria 2026.")}
+                             <WhatsAppButton 
+                                message="Hola, deseo recibir asesoramiento e iniciar mi trámite de Regularización Extraordinaria 2026."
                                 className="inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 px-6 rounded-xl hover:scale-105 transition-transform"
                             >
                                 Hablar con Abogada
-                            </button>
+                            </WhatsAppButton>
                         </div>
                     </div>
                 </div>

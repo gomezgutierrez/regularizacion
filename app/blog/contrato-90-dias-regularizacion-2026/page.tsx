@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Briefcase, CalendarDays, CheckCircle2 } from "lucide-react";
 import { RelatedPosts } from "@/components/related-posts";
-import { useWhatsApp } from "@/contexts/whatsapp-context";
+import { WhatsAppButton } from "@/components/whatsapp-button";
 
 export const metadata: Metadata = {
     title: "El Nuevo Requisito Laboral: Solo 90 Días de Contrato para Regularizarte",
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 export default function BlogPostContrato() {
-    const { openWhatsApp } = useWhatsApp();
+
 
     return (
         <main className="min-h-screen bg-slate-50 font-sans">
@@ -80,12 +80,12 @@ export default function BlogPostContrato() {
                                 Tienes hasta el 30 de junio de 2026. Revisaremos de forma impecable el perfil laboral que puedas aportar para meterte en esa ventaja de los 90 días.
                             </p>
                         </div>
-                        <button 
-                            onClick={() => openWhatsApp("Hola, he visto lo del contrato de 90 días y quiero iniciar mi trámite.")}
+                        <WhatsAppButton 
+                            message="Hola, he visto lo del contrato de 90 días y quiero iniciar mi trámite."
                             className="shrink-0 bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-xl hover:scale-105 transition-transform"
                         >
                             Preparar Expediente
-                        </button>
+                        </WhatsAppButton>
                     </div>
                 </div>
 

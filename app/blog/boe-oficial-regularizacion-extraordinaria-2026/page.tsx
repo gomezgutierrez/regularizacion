@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, BookOpen, Clock, FileCheck2, Scale } from "lucide-react";
 import { RelatedPosts } from "@/components/related-posts";
-import { useWhatsApp } from "@/contexts/whatsapp-context";
+import { WhatsAppButton } from "@/components/whatsapp-button";
 
 export const metadata: Metadata = {
     title: "BOE Oficial 2026: El Real Decreto para la Regularización Extraordinaria",
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 export default function BlogPostBOE() {
-    const { openWhatsApp } = useWhatsApp();
+
 
     return (
         <main className="min-h-screen bg-slate-50 font-sans">
@@ -88,13 +88,13 @@ export default function BlogPostBOE() {
                                 Como despacho especialista en la Regularización, procedemos ya a presentar telemáticamente los expedientes bajo el nuevo Real Decreto. 
                             </p>
                         </div>
-                        <button 
-                            onClick={() => openWhatsApp("Hola, he visto el BOE de la Regularización y quiero iniciar trámites urgentes.")}
+                        <WhatsAppButton 
+                            message="Hola, he visto el BOE de la Regularización y quiero iniciar trámites urgentes."
                             className="shrink-0 bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full text-center transition-transform hover:scale-105 min-h-[56px] flex items-center shadow-lg"
                         >
                             Hablar con un Abogado 
                             <ArrowRight className="w-5 h-5 ml-2" />
-                        </button>
+                        </WhatsAppButton>
                     </div>
                 </div>
 
