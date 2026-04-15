@@ -1,0 +1,72 @@
+[
+    {
+        "title": "[VIDEO] Prueba de Automatización",
+        "excerpt": "Este es un artículo generado automáticamente mediante el nuevo script de sincronización. ¡Todo funci...",
+        "icon": "FileText",
+        "color": "bg-purple-100 text-purple-600",
+        "href": "/blog/prueba-automatizacion-tiktok"
+    },
+    {
+        "title": "[VIDEO] El BOE ya es oficial: Análisis del RD 316/2026",
+        "excerpt": "Resumen técnico de la publicación de hoy 15 de abril sobre la Regularización.",
+        "icon": "FileText",
+        "color": "bg-slate-100 text-slate-600",
+        "href": "/blog/boe-analisis-oficial"
+    },
+    {
+        "title": "[VIDEO] Guía: Inicio de Solicitudes (16 de Abril)",
+        "excerpt": "Pasos para presentar tu expediente mañana mismo sin errores.",
+        "icon": "BookOpen",
+        "color": "bg-emerald-100 text-emerald-600",
+        "href": "/blog/manana-empiezan-solicitudes"
+    },
+    {
+        "title": "[VIDEO] Solicitantes de Asilo: La Vía Especial",
+        "excerpt": "Cómo acogerte a la regularización si tienes tarjeta roja o blanca.",
+        "icon": "ShieldAlert",
+        "color": "bg-blue-100 text-blue-600",
+        "href": "/blog/asilo-pasarela-regularizacion"
+    },
+    {
+        "title": "[VIDEO] Requisito de 90 Días de Contrato",
+        "excerpt": "La nueva flexibilidad laboral explicada en detalle.",
+        "icon": "BookOpen",
+        "color": "bg-green-100 text-green-600",
+        "href": "/blog/90-dias-contrato-video"
+    },
+    {
+        "title": "[VIDEO] Plazo Final: 30 de Junio de 2026",
+        "excerpt": "Por qué no debes esperar al último día para presentar tus papeles.",
+        "icon": "ShieldAlert",
+        "color": "bg-red-100 text-red-600",
+        "href": "/blog/plazo-final-30-junio"
+    },
+    {
+        "title": "¿Asilo pendiente? Guía para la Regularización 2026",
+        "excerpt": "¿Puedo acogerme a la nueva ley si tengo la 'tarjeta roja' o blanca?",
+        "icon": "FileText",
+        "color": "bg-blue-100 text-blue-600",
+        "href": "/blog/asilo-y-regularizacion-masiva-2026-compatibles"
+    },
+    {
+        "title": "5 Errores Fatales al Solicitar la Regularización",
+        "excerpt": "Los fallos de papeleo más comunes y cómo el estudio preventivo evita denegaciones.",
+        "icon": "ShieldAlert",
+        "color": "bg-amber-100 text-amber-600",
+        "href": "/blog/errores-fatales-regularizacion-2026"
+    },
+    {
+        "title": "Cómo demostrar los 5 meses de permanencia",
+        "excerpt": "Lista definitiva oficial de los documentos necesarios para aprobar.",
+        "icon": "BookOpen",
+        "color": "bg-emerald-100 text-emerald-600",
+        "href": "/blog/demostrar-permanencia-arraigo-extraordinario"
+    },
+    {
+        "title": "El Permiso de Trabajo Provisional en detalle",
+        "excerpt": "Conoce el momento exacto en el que obtienes la habilitación laboral.",
+        "icon": "FileText",
+        "color": "bg-purple-100 text-purple-600",
+        "href": "/blog/permiso-trabajo-provisional-regularizacion"
+    }
+]

@@ -1,0 +1,47 @@
+name: Sync TikTok to Blog
+
+on:
+  schedule:
+    - cron: '0 * * * *' # Revisar cada hora (al minuto 0)
+  workflow_dispatch: # Allows manual trigger from GitHub UI
+    inputs:
+      video_data:
+        description: 'JSON data of the video (optional)'
+        required: false
+        default: '{}'
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Needed to push changes
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Sync Script
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          if [ "${{ github.event.inputs.video_data }}" != "{}" ]; then
+            node scripts/sync-tiktok.mjs '${{ github.event.inputs.video_data }}'
+          else
+            echo "Running automatic scan..."
+            node scripts/scan-tiktok.mjs
+          fi
+
+      - name: Commit and Push changes
+        run: |
+          git config --global user.name 'TikTok-Sync-Bot'
+          git config --global user.email 'sync-bot@regularizacionmasiva.es'
+          git add .
+          git commit -m "feat(blog): auto-publish new post from TikTok" || echo "No changes to commit"
+          git push
