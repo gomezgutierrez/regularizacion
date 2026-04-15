@@ -1,87 +1,64 @@
-
 import Link from "next/link";
 import { ArrowRight, BookOpen, ShieldAlert, FileText, Briefcase } from "lucide-react";
+import postsManifest from "@/content/posts.json";
+
+const IconMap = {
+    BookOpen: BookOpen,
+    ShieldAlert: ShieldAlert,
+    FileText: FileText,
+    Briefcase: Briefcase
+};
 
 export function BlogGrid() {
-    const posts = [
-        {
-            title: "ANÁLISIS BOE: Guía Definitiva de la Regularización 2026",
-            excerpt: "El Real Decreto 316/2026 ya es oficial. Te explicamos los plazos, las nuevas reglas y cómo obtener tu permiso.",
-            icon: BookOpen,
-            color: "bg-red-100 text-red-600",
-            href: "/blog/boe-oficial-regularizacion-extraordinaria-2026"
-        },
-        {
-            title: "El Nuevo Requisito Laboral: Contrato de 90 días",
-            excerpt: "La gran sorpresa del BOE. Analizamos por qué el nuevo requisito temporal beneficia a miles de personas.",
-            icon: Briefcase,
-            color: "bg-emerald-100 text-emerald-600",
-            href: "/blog/contrato-90-dias-regularizacion-2026"
-        },
-        {
-            title: "¿Asilo pendiente? Guía para la Regularización 2026",
-            excerpt: "Resolvemos la duda más frecuente: ¿Puedo acogerme a la nueva ley si tengo la 'tarjeta roja' o blanca?",
-            icon: FileText,
-            color: "bg-blue-100 text-blue-600",
-            href: "/blog/asilo-y-regularizacion-masiva-2026-compatibles"
-        },
-        {
-            title: "5 Errores Fatales al Solicitar la Regularización",
-            excerpt: "Los fallos más comunes al presentar tus papeles y cómo el estudio de viabilidad evita denegaciones.",
-            icon: ShieldAlert,
-            color: "bg-amber-100 text-amber-600",
-            href: "/blog/errores-fatales-regularizacion-2026"
-        },
-        {
-            title: "Cómo demostrar los 5 meses de permanencia",
-            excerpt: "Qué documentos tienen validez legal para acreditar que estabas en España antes del 1 de enero de 2026.",
-            icon: BookOpen,
-            color: "bg-emerald-100 text-emerald-600",
-            href: "/blog/demostrar-permanencia-arraigo-extraordinario"
-        },
-        {
-            title: "El Permiso de Trabajo Provisional en detalle",
-            excerpt: "Descubre exactamente en qué momento del proceso consigues la habilitación legal para trabajar de forma inmediata.",
-            icon: FileText,
-            color: "bg-purple-100 text-purple-600",
-            href: "/blog/permiso-trabajo-provisional-regularizacion"
-        }
-    ];
+    // Show only the latest 6 posts on the homepage
+    const recentPosts = postsManifest.slice(0, 6);
 
     return (
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-white" id="noticias">
             <div className="container mx-auto px-4 max-w-6xl">
-                <div className="text-center mb-16">
-                    <h2 className="text-3xl font-bold text-slate-900 mb-4">Actualidad y Recursos</h2>
+                <div className="text-center mb-16 px-4">
+                    <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6">Últimas Actualizaciones</h2>
                     <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-                        Mantente informado con nuestros análisis legales expertos sobre la nueva normativa.
+                        Analizamos minuto a minuto los cambios en la Ley de Extranjería para que siempre tengas la información oficial.
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-8">
-                    {posts.map((post, index) => (
-                        <Link
-                            key={index}
-                            href={post.href}
-                            className="group bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:border-accent/20 hover:shadow-xl transition-all duration-300 flex flex-col"
-                        >
-                            <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-6 ${post.color} group-hover:scale-110 transition-transform`}>
-                                <post.icon className="w-6 h-6" />
-                            </div>
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                    {recentPosts.map((post, index) => {
+                        const Icon = IconMap[post.icon as keyof typeof IconMap] || FileText;
+                        return (
+                            <Link
+                                key={index}
+                                href={post.href}
+                                className="group bg-slate-50 rounded-[2rem] p-8 border border-slate-100 hover:border-accent/20 hover:shadow-2xl transition-all duration-300 flex flex-col h-full"
+                            >
+                                <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-6 ${post.color} group-hover:scale-110 transition-transform`}>
+                                    <Icon className="w-6 h-6" />
+                                </div>
 
-                            <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-accent transition-colors">
-                                {post.title}
-                            </h3>
+                                <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-accent transition-colors leading-tight">
+                                    {post.title}
+                                </h3>
 
-                            <p className="text-slate-600 mb-6 flex-grow leading-relaxed text-sm">
-                                {post.excerpt}
-                            </p>
+                                <p className="text-slate-600 mb-6 flex-grow leading-relaxed text-sm">
+                                    {post.excerpt}
+                                </p>
 
-                            <div className="flex items-center text-accent font-bold text-sm mt-auto">
-                                Leer más <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                            </div>
-                        </Link>
-                    ))}
+                                <div className="flex items-center text-accent font-bold text-sm mt-auto">
+                                    Ver análisis experto <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                                </div>
+                            </Link>
+                        );
+                    })}
+                </div>
+
+                <div className="text-center">
+                    <Link 
+                        href="/blog" 
+                        className="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-900 font-bold py-4 px-10 rounded-full transition-all text-sm uppercase tracking-widest"
+                    >
+                        Ver todas las noticias <ArrowRight className="w-5 h-5" />
+                    </Link>
                 </div>
             </div>
         </section>

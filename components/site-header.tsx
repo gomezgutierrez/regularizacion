@@ -49,7 +49,11 @@ export function SiteHeader() {
 
                 {/* --- DESKTOP NAV --- */}
                 <div className="hidden md:flex items-center space-x-6">
-                    {/* Language Selector */}
+                    <div className="flex items-center space-x-4 mr-4 border-r border-slate-100 pr-4">
+                        <Link href="/" className="text-sm font-bold text-slate-600 hover:text-accent transition-colors">Inicio</Link>
+                        <Link href="/blog" className="text-sm font-bold text-slate-600 hover:text-accent transition-colors">Noticias</Link>
+                    </div>
+
                     {/* Language Selector (Simple Code) */}
                     <div className="flex items-center gap-4 mr-4">
                         <Link href="/" className="font-bold text-sm hover:underline text-slate-900">ES</Link>
@@ -132,7 +136,6 @@ export function SiteHeader() {
                             >
                                 Inicio
                             </Link>
-                            {/* Hidden for now until blog is ready
                             <Link
                                 href="/blog"
                                 onClick={closeMenu}
@@ -140,7 +143,6 @@ export function SiteHeader() {
                             >
                                 Noticias
                             </Link>
-                            */}
                         </nav>
 
                         {/* Mobile CTA */}
