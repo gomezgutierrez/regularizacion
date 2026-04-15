@@ -3,12 +3,12 @@ name: Sync TikTok to Blog
 on:
   schedule:
     - cron: '0 * * * *' # Revisar cada hora (al minuto 0)
-  workflow_dispatch: # Allows manual trigger from GitHub UI
+  workflow_dispatch: # Permite sincronización manual desde el panel de GitHub
     inputs:
-      video_data:
-        description: 'JSON data of the video (optional)'
+      manual_urls:
+        description: 'URL(s) de TikTok separadas por comas (ej: https://tiktok.com/@u/video/123). Si está vacío, se escanea el perfil.'
         required: false
-        default: '{}'
+        default: ''
 
 jobs:
   sync:
@@ -31,10 +31,15 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
-          if [ "${{ github.event.inputs.video_data }}" != "{}" ]; then
-            node scripts/sync-tiktok.mjs '${{ github.event.inputs.video_data }}'
+          if [ -n "${{ github.event.inputs.manual_urls }}" ]; then
+            IFS=',' read -ra ADDR <<< "${{ github.event.inputs.manual_urls }}"
+            for url in "${ADDR[@]}"; do
+              id=$(echo $url | grep -oP 'video/\K\d+')
+              echo "Sincronizando manual: $url (ID: $id)"
+              node scripts/sync-tiktok.mjs "{\"id\":\"$id\", \"title\":\"Post Manual\", \"slug\":\"manual-$id\", \"description\":\"Sincronización manual solicitada via GitHub Actions.\"}"
+            done
           else
-            echo "Running automatic scan..."
+            echo "Iniciando escaneo automático..."
             node scripts/scan-tiktok.mjs
           fi
 

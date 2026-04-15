@@ -7,58 +7,87 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const MANIFEST_PATH = path.join(__dirname, '../content/posts.json');
 const USERNAME = 'abogadoextranjeriaonline';
 
-// We use a public RSS bridge to get the latest videos without an API key
-const RSS_URL = `https://rssbox.herokuapp.com/tiktok/@${USERNAME}`;
+// We use multiple RSS bridges for redundancy
+const BRIDGES = [
+    `https://rssbox.herokuapp.com/tiktok/@${USERNAME}`,
+    `https://proxitok.pabloferreiro.xyz/@${USERNAME}/rss`,
+    `https://tok.artemislena.eu/@${USERNAME}/rss`,
+    `https://proxitok.pussthecat.org/@${USERNAME}/rss`,
+    `https://tok.habedieehre.me/@${USERNAME}/rss`
+];
 
 async function scan() {
     console.log(`🔍 Scanning TikTok profile: @${USERNAME}...`);
     
+    let text = "";
+    for (const bridge of BRIDGES) {
+        try {
+            console.log(`📡 Trying bridge: ${bridge}`);
+            const response = await fetch(bridge, { signal: AbortSignal.timeout(10000) });
+            if (response.ok) {
+                text = await response.text();
+                if (text.includes("video/")) break;
+            }
+        } catch (e) {
+            console.warn(`⚠️ Bridge failed: ${bridge} - ${e.message}`);
+        }
+    }
+
+    if (!text) {
+        console.error("❌ All RSS bridges failed. Abortion scan.");
+        return;
+    }
+
     try {
-        // Fetch HTML/RSS from a bridge
-        // NOTE: In a real production environment, we'd use a more stable scraper or a paid API
-        // For now, we simulate the fetch or use a simple fetch to get the latest IDs
-        const response = await fetch(RSS_URL);
-        const text = await response.text();
+        // Find ALL video IDs in the feed
+        const videoMatches = [...text.matchAll(/video\/(\d+)/g)];
+        const allIds = [...new Set(videoMatches.map(m => m[1]))];
         
-        // Find latest video ID (Regex search for video/\d+)
-        const match = text.match(/video\/(\d+)/);
-        if (!match) {
-            console.warn("⚠️ No video IDs found in the feed.");
+        if (allIds.length === 0) {
+            console.warn("⚠️ No video IDs found in the feed content.");
             return;
         }
         
-        const latestId = match[1];
-        console.log(`⭐ Latest video detected: ${latestId}`);
+        console.log(`⭐ Detected IDs in feed: ${allIds.join(', ')}`);
 
-        // Check if already in manifest
+        // Check manifest
         const manifest = JSON.parse(fs.readFileSync(MANIFEST_PATH, 'utf8'));
-        const alreadyExists = manifest.some(p => p.href.includes(latestId));
+        const existingIds = manifest.map(p => {
+            const match = p.href.match(/auto-(\d+)/) || p.href.match(/video\/(\d+)/);
+            return match ? match[1] : null;
+        }).filter(Boolean);
 
-        if (!alreadyExists) {
-            console.log("🚀 New video found! Triggering AI Sync...");
+        const newIds = allIds.filter(id => !existingIds.includes(id));
+
+        if (newIds.length > 0) {
+            console.log(`🚀 ${newIds.length} NEW videos found! Processing...`);
             
-            // Here we define the metadata for the NEW video
-            // In a full implementation, we'd extract the title/desc from the RSS feed
-            const newData = {
-                id: latestId,
-                title: "Actualización Urgente: Regularización 2026",
-                slug: `auto-${latestId}`,
-                description: "Nueva actualización sobre el proceso de extranjería detectada en TikTok. Generado automáticamente por el AI Engine.",
-                date: new Date().toISOString(),
-                type: "ULTIMA HORA",
-                icon: "ShieldAlert",
-                color: "bg-red-100 text-red-600"
-            };
+            for (const id of newIds) {
+                console.log(`📝 Generating post for video: ${id}`);
+                const newData = {
+                    id: id,
+                    title: "Actualización Urgente: Arraigo 2026",
+                    slug: `auto-${id}`,
+                    description: "Última hora detectada en TikTok sobre la regularización de extranjeros 2026. Análisis generado automáticamente.",
+                    date: new Date().toISOString(),
+                    type: "ACTUALIDAD",
+                    icon: "ShieldAlert",
+                    color: "bg-amber-100 text-amber-600"
+                };
 
-            // Run the sync script
-            // Use inherited process for GEMINI_API_KEY
-            execSync(`node scripts/sync-tiktok.mjs '${JSON.stringify(newData)}'`, { stdio: 'inherit' });
+                try {
+                    execSync(`node scripts/sync-tiktok.mjs '${JSON.stringify(newData)}'`, { stdio: 'inherit' });
+                    console.log(`✅ Success for ${id}`);
+                } catch (e) {
+                    console.error(`❌ Failed to sync ${id}:`, e.message);
+                }
+            }
         } else {
             console.log("✅ No new videos to sync.");
         }
 
     } catch (e) {
-        console.error("❌ Error scanning TikTok:", e.message);
+        console.error("❌ Error processing feed:", e.message);
     }
 }
 
