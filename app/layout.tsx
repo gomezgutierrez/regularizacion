@@ -8,6 +8,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { Footer } from "@/components/footer";
 import { SiteHeader } from "@/components/site-header";
 import { WhatsAppProvider } from "@/contexts/whatsapp-context";
+import { TikTokEmbedHandler } from "@/components/tiktok-embed-handler";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -106,11 +107,6 @@ export default function RootLayout({
           `}
         </Script>
 
-        {/* TikTok Embed Script - Global */}
-        <Script
-          src="https://www.tiktok.com/embed.js"
-          strategy="afterInteractive"
-        />
 
 
 
@@ -120,6 +116,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <WhatsAppProvider>
+          <TikTokEmbedHandler />
           <SiteHeader />
           {children}
           <Footer />
