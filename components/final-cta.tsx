@@ -1,8 +1,10 @@
 "use client";
 
 import { MessageCircle } from "lucide-react";
+import { useWhatsApp } from "@/contexts/whatsapp-context";
 
 export function FinalCta() {
+    const { openWhatsApp } = useWhatsApp();
     return (
         <section className="py-16 bg-primary text-primary-foreground text-center">
             <div className="container mx-auto px-4">
@@ -14,15 +16,19 @@ export function FinalCta() {
                     Solo información real y honesta.
                 </p>
 
-                <a
-                    href="https://wa.me/34614731773"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full text-lg shadow-lg hover:shadow-green-500/20 transition-all transform hover:-translate-y-1"
+                <button
+                    aria-label="Hablar ahora con una abogada por WhatsApp"
+                    onClick={() => {
+                        if (typeof window !== 'undefined' && (window as any).dataLayer) {
+                            (window as any).dataLayer.push({ event: 'whatsapp_bottom_click' });
+                        }
+                        openWhatsApp("Hola, deseo recibir asesoramiento e iniciar mi trámite de Regularización Extraordinaria 2026.");
+                    }}
+                    className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full text-lg shadow-lg hover:shadow-green-500/20 transition-all transform hover:-translate-y-1 min-h-[56px]"
                 >
                     <MessageCircle className="w-6 h-6" />
                     Hablar ahora con una abogada por WhatsApp
-                </a>
+                </button>
 
                 <p className="mt-6 text-sm text-slate-400">
                     Respuesta media: Menos de 2 horas en horario laboral.

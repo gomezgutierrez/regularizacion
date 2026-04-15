@@ -1,3 +1,4 @@
+"use client";
 
 import { ArrowLeft, ArrowRight, ShieldCheck, CheckCircle, Check, Scale } from "lucide-react";
 import { CaseCounter } from "@/components/case-counter";
@@ -20,9 +21,9 @@ export function Hero() {
                         </div>
 
                         <h1 className="text-4xl lg:text-7xl font-extrabold text-slate-900 leading-[1.1] mb-8 tracking-tight">
-                            Regularización Masiva 2026 <br />
+                            Regularización Extraordinaria España 2026 <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-                                Tu Trámite de Extranjería
+                                ¡BOE Oficial! Inicia tu Trámite Hoy
                             </span>
                         </h1>
 
@@ -40,9 +41,15 @@ export function Hero() {
                                 href="https://buy.stripe.com/cNi7sEfpOg4oalw53f6Ri00"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="w-full sm:w-auto bg-accent hover:bg-accent/90 text-white text-lg font-bold py-5 px-10 rounded-full shadow-xl shadow-accent/20 transition-all transform hover:scale-105 flex items-center justify-center group"
+                                aria-label="Iniciar consulta inmediata por WhatsApp"
+                                onClick={() => {
+                                    if (typeof window !== 'undefined' && (window as any).dataLayer) {
+                                        (window as any).dataLayer.push({ event: 'whatsapp_lead_start' });
+                                    }
+                                }}
+                                className="w-full sm:w-auto bg-accent hover:bg-accent/90 text-white text-lg font-bold py-5 px-10 rounded-full shadow-xl shadow-accent/20 transition-all transform hover:scale-105 flex items-center justify-center group min-h-[56px]"
                             >
-                                INICIAR ESTUDIO DE VIABILIDAD - 39€
+                                INICIA TU EXPEDIENTE AHORA
                                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                             </a>
                         </div>
@@ -66,7 +73,7 @@ export function Hero() {
                             {/* Left side of Card: Features */}
                             <div className="p-6 md:p-8 md:w-3/5 flex flex-col justify-between bg-white relative z-10">
                                 <div>
-                                    <h3 className="text-xl font-bold text-slate-900 mb-1">Estudio de Viabilidad</h3>
+                                    <h3 className="text-xl font-bold text-slate-900 mb-1">Evaluación de Caso Personalizada</h3>
                                     <p className="text-[#E91E63] font-bold mb-6 text-sm">Regularización 2026</p>
 
                                     <ul className="space-y-4 mb-8 text-sm">
@@ -118,7 +125,13 @@ export function Hero() {
                                     href="https://buy.stripe.com/cNi7sEfpOg4oalw53f6Ri00"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="w-full bg-[#E91E63] hover:bg-[#d81b60] text-white font-bold py-3 rounded-xl shadow-lg shadow-pink-900/20 transition-all transform hover:scale-[1.02] flex items-center justify-center group"
+                                    aria-label="Pagar 39 euros para iniciar estudio de viabilidad"
+                                    onClick={() => {
+                                        if (typeof window !== 'undefined' && (window as any).dataLayer) {
+                                            (window as any).dataLayer.push({ event: 'evaluation_checkout' });
+                                        }
+                                    }}
+                                    className="w-full bg-[#E91E63] hover:bg-[#d81b60] text-white font-bold py-4 rounded-xl shadow-lg shadow-pink-900/20 transition-all transform hover:scale-[1.02] flex items-center justify-center group min-h-[56px]"
                                 >
                                     INICIAR POR 39€
                                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />

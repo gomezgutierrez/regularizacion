@@ -1,9 +1,23 @@
 
 import Link from "next/link";
-import { ArrowRight, BookOpen, ShieldAlert, FileText } from "lucide-react";
+import { ArrowRight, BookOpen, ShieldAlert, FileText, Briefcase } from "lucide-react";
 
 export function BlogGrid() {
     const posts = [
+        {
+            title: "ANÁLISIS BOE: Guía Definitiva de la Regularización 2026",
+            excerpt: "El Real Decreto 316/2026 ya es oficial. Te explicamos los plazos, las nuevas reglas y cómo obtener tu permiso.",
+            icon: BookOpen,
+            color: "bg-red-100 text-red-600",
+            href: "/blog/boe-oficial-regularizacion-extraordinaria-2026"
+        },
+        {
+            title: "El Nuevo Requisito Laboral: Contrato de 90 días",
+            excerpt: "La gran sorpresa del BOE. Analizamos por qué el nuevo requisito temporal beneficia a miles de personas.",
+            icon: Briefcase,
+            color: "bg-emerald-100 text-emerald-600",
+            href: "/blog/contrato-90-dias-regularizacion-2026"
+        },
         {
             title: "¿Asilo pendiente? Guía para la Regularización 2026",
             excerpt: "Resolvemos la duda más frecuente: ¿Puedo acogerme a la nueva ley si tengo la 'tarjeta roja' o blanca?",
@@ -12,18 +26,25 @@ export function BlogGrid() {
             href: "/blog/asilo-y-regularizacion-masiva-2026-compatibles"
         },
         {
-            title: "Cómo evitar la denegación de tu expediente",
-            excerpt: "Los 3 errores más comunes y cómo el estudio de viabilidad es el primer paso para acceder a nuestra gestión integral garantizada.",
+            title: "5 Errores Fatales al Solicitar la Regularización",
+            excerpt: "Los fallos más comunes al presentar tus papeles y cómo el estudio de viabilidad evita denegaciones.",
             icon: ShieldAlert,
             color: "bg-amber-100 text-amber-600",
-            href: "/guia-regularizacion-2026"
+            href: "/blog/errores-fatales-regularizacion-2026"
         },
         {
-            title: "Novedades de la Reforma de Extranjería",
-            excerpt: "Análisis detallado de los cambios en los plazos de estancia y requisitos de arraigo para 2026.",
+            title: "Cómo demostrar los 5 meses de permanencia",
+            excerpt: "Qué documentos tienen validez legal para acreditar que estabas en España antes del 1 de enero de 2026.",
             icon: BookOpen,
             color: "bg-emerald-100 text-emerald-600",
-            href: "/guia-regularizacion-2026" // Fallback to guide as requested
+            href: "/blog/demostrar-permanencia-arraigo-extraordinario"
+        },
+        {
+            title: "El Permiso de Trabajo Provisional en detalle",
+            excerpt: "Descubre exactamente en qué momento del proceso consigues la habilitación legal para trabajar de forma inmediata.",
+            icon: FileText,
+            color: "bg-purple-100 text-purple-600",
+            href: "/blog/permiso-trabajo-provisional-regularizacion"
         }
     ];
 

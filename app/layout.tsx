@@ -7,6 +7,7 @@ import { Analytics } from "@vercel/analytics/react";
 
 import { Footer } from "@/components/footer";
 import { SiteHeader } from "@/components/site-header";
+import { WhatsAppProvider } from "@/contexts/whatsapp-context";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,12 +21,12 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://regularizacionmasiva.es"),
-  title: "Regularización Masiva 2026: Abogados Extranjería y Requisitos BOE",
-  description: "Guía oficial de la Regularización de Extranjeros 2026. Te ayudamos a tramitar tus papeles si llegaste a España antes de finales de 2025. Consulta viabilidad hoy.",
-  keywords: ["regularización masiva", "regularización extranjeros 2026", "regularización extraordinaria", "permiso residencia españa", "arraigo 2026", "abogados extranjería", "real decreto regularización", "inmaculada moncho"],
+  title: "Regularización Extraordinaria España 2026 | Consigue tus Papeles",
+  description: "Descubre los requisitos de la Regularización Extraordinaria en 2026, solicita el nuevo Arraigo y obtén tu permiso provisional de trabajo inmediato. Inicia tu trámite ahora.",
+  keywords: ["regularización extraordinaria españa 2026", "arraigo extraordinario", "papeles españa", "permiso trabajo provisional", "nuevo arraigo asilo", "abogados extranjería"],
   openGraph: {
-    title: "Regularización Masiva 2026: ¿Tienes derecho a Residencia? - Abogada Inmaculada Moncho",
-    description: "El Gobierno aprueba la regularización extraordinaria. Comprueba requisitos, fechas y documentos necesarios con una abogada experta.",
+    title: "Regularización Extraordinaria España 2026 | Consigue tus Papeles",
+    description: "El Gobierno aprueba el Arraigo Extraordinario. Comprueba requisitos, fechas y empieza a trabajar legalmente de inmediato.",
     type: "website",
     locale: "es_ES",
   }
@@ -45,7 +46,7 @@ const jsonLd = {
     "addressCountry": "ES"
   },
   "priceRange": "$$",
-  "description": "Despacho especializado en la Regularización Masiva de Extranjeros 2026. Gestión 100% telemática en toda España.",
+  "description": "Despacho especializado en la Regularización Extraordinaria y Arraigo de Extranjeros 2026. Gestión telemática en toda España para conseguir tus papeles.",
   "legalName": "Inmaculada Moncho Giner",
   "employee": {
     "@type": "Person",
@@ -112,10 +113,12 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <SiteHeader />
-        {children}
-        <Footer />
-        <FloatingWhatsApp />
+        <WhatsAppProvider>
+          <SiteHeader />
+          {children}
+          <Footer />
+          <FloatingWhatsApp />
+        </WhatsAppProvider>
         <Analytics />
       </body>
     </html>

@@ -6,7 +6,7 @@ export function UrgencySection() {
             <div className="container mx-auto flex flex-col md:flex-row items-center justify-center gap-2 text-center md:text-left text-black font-bold">
                 <AlertTriangle className="w-6 h-6 animate-pulse" />
                 <p className="text-base md:text-lg">
-                    <strong>Plazos confirmados:</strong> Solicitudes de Abril a Junio. Solo 3 meses. ¡Prepara tus documentos YA!
+                    <strong>¡BOE PUBLICADO EL 15 DE ABRIL!</strong> Fecha límite innegociable el 30 de Junio de 2026. ¡Inicia tu expediente con nuestros abogados YA!
                 </p>
             </div>
         </section>

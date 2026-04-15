@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle, Clock, ShieldCheck, FileText, AlertTriangle } from "lucide-react";
 import { WaitingListModal } from "@/components/waiting-list-modal";
 import { PricingCardAsylum } from "./pricing-card-asylum"; // Extracted component
+import { RelatedPosts } from "@/components/related-posts";
 
 export const metadata: Metadata = {
     title: "[VÍDEO] ¿Tienes Asilo o Protección Internacional? Así te afecta la Regularización 2026",
@@ -62,19 +63,18 @@ export default function BlogPostAsilo() {
                     <h2 className="text-3xl font-bold text-slate-900 mb-6">Protección Internacional y Papeles: Lo que debes saber</h2>
 
                     <p className="lead text-xl text-slate-600 mb-8">
-                        En este vídeo abordo una de las preguntas más frecuentes que recibo en el despacho, especialmente de la comunidad de <strong>Colombia, Perú y Argentina</strong>: ¿Qué pasa con mi solicitud de asilo ante la nueva Regularización Masiva?
+                        En este vídeo abordo una de las preguntas más frecuentes que recibo en el despacho, especialmente de la comunidad de <strong>Colombia, Perú y Argentina</strong>. Y ahora, con la publicación oficial del BOE (Real Decreto 316/2026), traemos excelentes noticias: existe una disposición específica para vosotros.
                     </p>
 
-                    <div className="grid md:grid-cols-2 gap-8 mb-8">
                         <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
                             <div className="flex items-start mb-4">
                                 <div className="p-2 bg-blue-100 rounded-lg text-blue-600 mr-3">
                                     <ShieldCheck className="w-6 h-6" />
                                 </div>
-                                <h3 className="font-bold text-lg">La Estrategia Doble</h3>
+                                <h3 className="font-bold text-lg">La Disposición Adicional Vigésima del BOE</h3>
                             </div>
                             <p className="text-slate-600">
-                                Muchos solicitantes de Protección Internacional llevan años esperando. La Regularización 2026 puede ser tu <strong>"Plan B" seguro</strong>, pero hay que saber cuándo presentarla para no perder derechos adquiridos.
+                                La ley finalmente confirma la creación de una "Vía Especial" para vosotros (ya tengáis tarjeta blanca, roja o estéis esperando la primera cita antes de 2026) que exige 5 meses de ininterrupción.
                             </p>
                         </div>
 
@@ -83,20 +83,20 @@ export default function BlogPostAsilo() {
                                 <div className="p-2 bg-green-100 rounded-lg text-green-600 mr-3">
                                     <FileText className="w-6 h-6" />
                                 </div>
-                                <h3 className="font-bold text-lg">Compatibilidad</h3>
+                                <h3 className="font-bold text-lg">No renuncies aún a tu asilo</h3>
                             </div>
                             <p className="text-slate-600">
-                                Exploramos las vías legales para cambiar de estatus sin quedar en un limbo jurídico. Es crucial mantener tu estatus actual hasta tener la nueva resolución en mano.
+                                <strong>La regla de oro del Real Decreto:</strong> Puedes solicitar el arraigo sin dar de baja tu asilo. Solo tendrás que desistir oficialmente del asilo <span className="underline">cuando tu regularización sea aprobada favorablemente</span>. Nunca antes.
                             </p>
                         </div>
                     </div>
 
                     <div className="bg-amber-50 border-l-4 border-amber-400 p-6 rounded-r-xl">
                         <h4 className="font-bold text-amber-900 flex items-center mb-2">
-                            <AlertTriangle className="w-5 h-5 mr-2" /> Importante: Nacionalidad
+                            <AlertTriangle className="w-5 h-5 mr-2" /> Trámite simultáneo y Suspensión de Expulsión
                         </h4>
                         <p className="text-amber-800 m-0">
-                            Cómo afecta este cambio a tu futuro trámite de nacionalidad española es un factor decisivo. Renunciar al asilo antes de tiempo podría reiniciar el contador de años de residencia legal necesarios.
+                            Si tienes una carta extintiva de asilo con orden de expulsión, el solo hecho de que Extranjería apruebe tu trámite de la Regularización originará el archivo automático de cualquier orden de devolución en vigor. Es el "Plan B" perfecto y más seguro regulado por ley.
                         </p>
                     </div>
                 </div>
@@ -118,6 +118,8 @@ export default function BlogPostAsilo() {
                     <PricingCardAsylum buttonOnly />
 
                 </div>
+
+                <RelatedPosts currentPath="/blog/asilo-y-regularizacion-masiva-2026-compatibles" />
 
             </article>
         </main>

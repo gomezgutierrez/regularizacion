@@ -4,7 +4,7 @@ import { JiraClient } from '@/lib/jira';
 export async function POST(request: Request) {
     try {
         const body = await request.json();
-        const { originUrl } = body;
+        const { originUrl, phoneNumber, message } = body;
 
         const now = new Date();
         const dateStr = now.toLocaleDateString('es-ES', {
@@ -15,8 +15,8 @@ export async function POST(request: Request) {
             minute: '2-digit'
         });
 
-        const summary = `WhatsApp Lead - ${dateStr}`;
-        const description = `Interacción iniciada desde WhatsApp.\nURL de origen: ${originUrl || 'Desconocida'}`;
+        const summary = `[WHATSAPP] Lead ${phoneNumber || 'Sin Teléfono'}`;
+        const description = `Interacción iniciada desde WhatsApp en la web.\nFecha: ${dateStr}\nTeléfono capturado: ${phoneNumber || 'N/A'}\nMensaje previsto: ${message || 'N/A'}\nURL de origen: ${originUrl || 'Desconocida'}`;
 
         const jira = new JiraClient();
 

@@ -1,7 +1,8 @@
-import Link from "next/link";
 import { MessageCircle, Award } from "lucide-react";
+import { useWhatsApp } from "@/contexts/whatsapp-context";
 
 export function AuthorBio() {
+    const { openWhatsApp } = useWhatsApp();
     return (
         <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 mt-12 flex flex-col md:flex-row items-center gap-6">
             <div className="shrink-0 relative">
@@ -22,14 +23,13 @@ export function AuthorBio() {
                     Garantizamos tu trámite con seguridad jurídica.
                 </p>
 
-                <Link
-                    href="https://wa.me/34624945297?text=Hola%20Inmaculada,%20he%20le%C3%ADdo%20tu%20art%C3%ADculo%20y%20quiero%20revisar%20mi%20caso."
-                    target="_blank"
+                <button
+                    onClick={() => openWhatsApp("Hola Inmaculada, he leído tu artículo y quiero revisar mi caso.")}
                     className="inline-flex items-center gap-2 text-sm font-bold text-green-600 hover:text-green-700 bg-green-50 px-4 py-2 rounded-full border border-green-200 transition-colors"
                 >
                     <MessageCircle className="w-4 h-4" />
                     Consultar viabilidad por WhatsApp
-                </Link>
+                </button>
             </div>
         </div>
     );

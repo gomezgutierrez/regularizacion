@@ -6,7 +6,7 @@ export function InfoSection() {
             <div className="container mx-auto px-4 lg:px-8">
                 <div className="max-w-4xl mx-auto text-center mb-16">
                     <span className="inline-block px-3 py-1 rounded-full bg-green-100 text-green-800 text-sm font-bold tracking-wide mb-4 border border-green-200">
-                        ✅ Acuerdo Confirmado Gobierno - Podemos
+                        ✅ Real Decreto Oficialmente Aprobado
                     </span>
                     <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-4">
                         Regularización de medio millón de migrantes
@@ -16,95 +16,93 @@ export function InfoSection() {
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-                    <div className="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition-shadow">
-                        <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4 text-primary">
+                <div className="grid md:grid-cols-2 gap-8 mb-16">
+                    {/* Tarjeta 1: Requisitos Base */}
+                    <div className="p-6 rounded-2xl bg-slate-50 border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                        <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4 text-blue-700">
                             <Users className="w-6 h-6" />
                         </div>
-                        <h3 className="text-xl font-bold text-primary mb-2">¿Quién puede aplicar?</h3>
-                        <p className="text-muted-foreground text-sm">
-                            Personas que vivan en España antes del <strong>31 de diciembre de 2025</strong> (fecha por confirmar/actualizada según acuerdo).
-                        </p>
-                        <p className="text-xs text-slate-400 mt-2 italic">Sin antecedentes penales.</p>
-                    </div>
-
-                    <div className="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition-shadow">
-                        <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4 text-primary">
-                            <FileText className="w-6 h-6" />
-                        </div>
-                        <h3 className="text-xl font-bold text-primary mb-2">¿Qué se consigue?</h3>
-                        <ul className="text-sm text-muted-foreground space-y-2 text-left">
+                        <h3 className="text-xl font-bold text-primary mb-2">Requisitos Base (RD 316/2026)</h3>
+                        <ul className="text-sm text-muted-foreground space-y-2 mt-4 text-left">
                             <li className="flex items-start gap-2">
-                                <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0 mt-0.5" />
-                                Permiso de residencia y trabajo por 1 año.
+                                <CheckCircle2 className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" />
+                                Estar en España <strong>antes del 1 de Enero de 2026</strong>.
                             </li>
                             <li className="flex items-start gap-2">
-                                <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0 mt-0.5" />
-                                Suspensión de órdenes de expulsión.
+                                <CheckCircle2 className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" />
+                                Demostrar permanencia de <strong>5 meses consecutivos</strong> previos a la solicitud.
+                            </li>
+                            <li className="flex items-start gap-2">
+                                <CheckCircle2 className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" />
+                                Carecer de antecedentes penales graves (nacionales o en su país de origen).
                             </li>
                         </ul>
                     </div>
 
-                    <div className="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition-shadow">
-                        <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4 text-primary">
+                    {/* Tarjeta 2: Vías de acceso (Arraigo) */}
+                    <div className="p-6 rounded-2xl bg-slate-50 border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                        <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-4 text-green-700">
+                            <FileText className="w-6 h-6" />
+                        </div>
+                        <h3 className="text-xl font-bold text-primary mb-2">Vías de Excepcionalidad (Cumplir 1)</h3>
+                        <ul className="text-sm text-muted-foreground space-y-2 mt-4 text-left">
+                            <li className="flex items-start gap-2">
+                                <CheckCircle2 className="w-4 h-4 text-green-600 shrink-0 mt-0.5" />
+                                <strong>Laboral:</strong> Contrato de trabajo o promesa de trabajo de solo <strong>90 días</strong> en 1 año.
+                            </li>
+                            <li className="flex items-start gap-2">
+                                <CheckCircle2 className="w-4 h-4 text-green-600 shrink-0 mt-0.5" />
+                                <strong>Familiar:</strong> Unidad familiar con menores, ascendientes o dependientes en España.
+                            </li>
+                            <li className="flex items-start gap-2">
+                                <CheckCircle2 className="w-4 h-4 text-green-600 shrink-0 mt-0.5" />
+                                <strong>Vulnerabilidad:</strong> Informe emitido por entidades locales competentes.
+                            </li>
+                        </ul>
+                    </div>
+
+                    {/* Tarjeta 3: Vía de Asilo */}
+                    <div className="p-6 rounded-2xl bg-amber-50 border border-amber-100 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden">
+                        <div className="absolute top-0 right-0 bg-amber-200 text-amber-900 text-[10px] font-bold px-3 py-1 rounded-bl-lg">
+                            DISP. ADICIONAL 20
+                        </div>
+                        <div className="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-4 text-amber-700">
+                            <HelpCircle className="w-6 h-6" />
+                        </div>
+                        <h3 className="text-xl font-bold text-amber-900 mb-2">Solicitantes de Asilo</h3>
+                        <p className="text-sm text-amber-800 mb-3">Si solicitaste o estabas en trámite de asilo antes de 2026 tienes una vía directa.</p>
+                        <ul className="text-sm text-amber-800/80 space-y-2 mt-2 text-left">
+                            <li className="flex items-start gap-2">
+                                <CheckCircle2 className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+                                <strong>No tienes que renunciar al asilo</strong> para iniciar el expediente, solo tras la aprobación definitiva.
+                            </li>
+                            <li className="flex items-start gap-2">
+                                <CheckCircle2 className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+                                Suspensión Inmediata de órdenes de devolución o cartas extintivas en vigor.
+                            </li>
+                        </ul>
+                    </div>
+
+                    {/* Tarjeta 4: Fechas y Permiso */}
+                    <div className="p-6 rounded-2xl bg-slate-50 border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                        <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mb-4 text-red-700">
                             <Clock className="w-6 h-6" />
                         </div>
-                        <h3 className="text-xl font-bold text-primary mb-2">Fechas Clave</h3>
-                        <p className="text-muted-foreground text-sm">
-                            Se prevé abrir solicitudes en <strong>Primavera (Abril)</strong> hasta finales de <strong>Junio</strong>.
-                        </p>
-                        <div className="mt-3 bg-amber-50 text-amber-800 text-xs p-2 rounded border border-amber-100 flex gap-2">
-                            <AlertTriangle className="w-3 h-3 shrink-0 mt-0.5" />
-                            Plazo muy corto. Prepara documentos YA.
-                        </div>
+                        <h3 className="text-xl font-bold text-primary mb-2">Permiso Inmediato y Límite</h3>
+                        <ul className="text-sm text-muted-foreground space-y-2 mt-4 text-left">
+                            <li className="flex items-start gap-2">
+                                <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                                <strong>Trabajo inmediato:</strong> Solo con la "comunicación de inicio de trámite" ya tienes habilitación provisional de trabajo.
+                            </li>
+                            <li className="flex items-start gap-2 font-bold text-red-600">
+                                <AlertTriangle className="w-4 h-4 text-red-600 shrink-0 mt-0.5" />
+                                Plazo Máximo: 30 de Junio de 2026. Al transcurrir 3 meses sin resolución de la Administración hay silencio administrativo negativo.
+                            </li>
+                        </ul>
                     </div>
                 </div>
 
-                {/* SEO Content & FAQ */}
-                <div className="max-w-4xl mx-auto">
-                    <h3 className="text-2xl font-bold text-primary mb-8 flex items-center gap-2">
-                        <HelpCircle className="w-6 h-6 text-accent" />
-                        Preguntas Frecuentes sobre la Regularización (FAQ)
-                    </h3>
 
-                    <div className="space-y-4">
-                        <details className="group bg-slate-50 border border-slate-200 rounded-xl overflow-hidden transition-all duration-300 open:shadow-md hover:bg-white">
-                            <summary className="flex items-center justify-between p-4 cursor-pointer font-bold text-slate-800 hover:text-primary list-none">
-                                <span>¿Cuándo empieza la regularización extraordinaria 2026?</span>
-                                <span className="transition-transform group-open:rotate-180">▼</span>
-                            </summary>
-                            <div className="p-4 pt-0 text-slate-600 leading-relaxed text-sm">
-                                Según el acuerdo entre Gobierno y Podemos, la tramitación se hará vía Real Decreto. Se espera que el plazo de solicitudes se abra en <strong>abril de 2026</strong> y dure 3 meses. Es fundamental tener la documentación lista antes de esa fecha.
-                            </div>
-                        </details>
-
-                        <details className="group bg-slate-50 border border-slate-200 rounded-xl overflow-hidden transition-all duration-300 open:shadow-md hover:bg-white">
-                            <summary className="flex items-center justify-between p-4 cursor-pointer font-bold text-slate-800 hover:text-primary list-none">
-                                <span>¿Qué documentos necesito para demostrar mi arraigo?</span>
-                                <span className="transition-transform group-open:rotate-180">▼</span>
-                            </summary>
-                            <div className="p-4 pt-0 text-slate-600 leading-relaxed text-sm">
-                                Para esta regularización masiva o el nuevo reglamento, necesitarás pruebas de estancia en España anteriores a finales de 2025. Los documentos más válidos son:
-                                <ul className="list-disc ml-5 mt-2 space-y-1">
-                                    <li>Certificado de empadronamiento histórico.</li>
-                                    <li>Informes médicos de la Seguridad Social.</li>
-                                    <li>Justificantes de envío de dinero.</li>
-                                    <li>Abonos de transporte público nominales.</li>
-                                </ul>
-                            </div>
-                        </details>
-
-                        <details className="group bg-slate-50 border border-slate-200 rounded-xl overflow-hidden transition-all duration-300 open:shadow-md hover:bg-white">
-                            <summary className="flex items-center justify-between p-4 cursor-pointer font-bold text-slate-800 hover:text-primary list-none">
-                                <span>¿Afecta esta regularización masiva a los solicitantes de asilo?</span>
-                                <span className="transition-transform group-open:rotate-180">▼</span>
-                            </summary>
-                            <div className="p-4 pt-0 text-slate-600 leading-relaxed text-sm">
-                                Sí, esta regularización masiva es compatible y muy beneficiosa para personas con solicitud de asilo pendiente o denegada, siempre que cumplan el requisito de estancia temporal en el país. Permite cambiar a un permiso de residencia y trabajo estable.
-                            </div>
-                        </details>
-                    </div>
-                </div>
             </div>
         </section>
     );

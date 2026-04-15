@@ -7,6 +7,7 @@ import { FinalCta } from "@/components/final-cta";
 import { IntegralServiceSection } from "@/components/integral-service-section";
 import { BlogGrid } from "@/components/blog-grid";
 import { DoubtsContactForm } from "@/components/doubts-contact-form";
+import { SeoContentSection } from "@/components/seo-content-section";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         </div>
       </section>
       <VideoCtaSection />
+      <SeoContentSection />
       <BlogGrid />
       <InfoSection />
       <IntegralServiceSection />
