@@ -39,8 +39,8 @@ export default function BlogPostPermanencia() {
                         <div className="relative w-full max-w-[340px] md:max-w-[400px] rounded-2xl overflow-hidden shadow-2xl border-4 border-slate-900 bg-black">
                             <blockquote
                                 className="tiktok-embed"
-                                cite="https://www.tiktok.com/@abogadoextranjeriaonline/video/7600044602241846550"
-                                data-video-id="7600044602241846550"
+                                cite="https://www.tiktok.com/@abogadoextranjeriaonline/video/7495861118123511046"
+                                data-video-id="7495861118123511046"
                                 style={{ maxWidth: "605px", minWidth: "325px" }}
                             >
                                 <section>

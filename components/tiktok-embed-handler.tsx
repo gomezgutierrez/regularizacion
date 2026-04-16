@@ -7,29 +7,45 @@ export function TikTokEmbedHandler() {
     const pathname = usePathname();
 
     useEffect(() => {
-        // Function to reload TikTok embeds
-        const reloadTikTok = () => {
-            // If the script is already loaded, it adds a global object or we can re-trigger it
-            // The most robust way in Next.js is to find the blockquotes and re-trigger the script
-            const embeds = document.querySelectorAll(".tiktok-embed");
-            if (embeds.length > 0) {
-                // If the script isn't in the head, we add it. 
-                // If it is, we remove and re-add to force a scan of the new DOM elements
-                const existingScript = document.querySelector('script[src="https://www.tiktok.com/embed.js"]');
-                if (existingScript) {
-                    existingScript.remove();
-                }
+        const scriptUrl = "https://www.tiktok.com/embed.js";
 
-                const script = document.createElement("script");
-                script.src = "https://www.tiktok.com/embed.js";
-                script.async = true;
-                document.body.appendChild(script);
+        const loadTikTokScript = () => {
+            const existingScript = document.querySelector(`script[src="${scriptUrl}"]`);
+            if (existingScript) {
+                existingScript.remove();
             }
+
+            const script = document.createElement("script");
+            script.src = scriptUrl;
+            script.async = true;
+            document.body.appendChild(script);
         };
 
-        // Run on mount and on every pathname change
-        reloadTikTok();
+        // MutationObserver to watch for new TikTok embeds being added to the DOM
+        const observer = new MutationObserver((mutations) => {
+            let shouldReload = false;
+            mutations.forEach((mutation) => {
+                mutation.addedNodes.forEach((node) => {
+                    if (node instanceof HTMLElement) {
+                        if (node.classList.contains('tiktok-embed') || node.querySelector('.tiktok-embed')) {
+                            shouldReload = true;
+                        }
+                    }
+                });
+            });
+
+            if (shouldReload) {
+                loadTikTokScript();
+            }
+        });
+
+        observer.observe(document.body, { childList: true, subtree: true });
+
+        // Initial check and on path change
+        loadTikTokScript();
+
+        return () => observer.disconnect();
     }, [pathname]);
 
-    return null; // This component doesn't render anything
+    return null;
 }

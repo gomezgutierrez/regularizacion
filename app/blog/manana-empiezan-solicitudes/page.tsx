@@ -35,7 +35,7 @@ const jsonLd = {
         "description": "Cómo usar el sistema Mercurio para la regularización",
         "thumbnailUrl": "https://regularizacionmasiva.es/images/mercurio-thumbnail.jpg",
         "uploadDate": "2026-04-15T12:00:00Z",
-        "contentUrl": "https://www.tiktok.com/@abogadoextranjeriaonline/video/7600044602241846550"
+        "contentUrl": "https://www.tiktok.com/@abogadoextranjeriaonline/video/7495914945484852504"
     }
 };
 
@@ -69,8 +69,8 @@ export default function BlogPostInicioMañana() {
                     <div className="relative w-full max-w-[340px] md:max-w-[400px] rounded-2xl overflow-hidden shadow-2xl border-4 border-slate-900 bg-black">
                         <blockquote
                             className="tiktok-embed"
-                            cite="https://www.tiktok.com/@abogadoextranjeriaonline/video/7600044602241846550"
-                            data-video-id="7600044602241846550"
+                            cite="https://www.tiktok.com/@abogadoextranjeriaonline/video/7495914945484852504"
+                            data-video-id="7495914945484852504"
                             style={{ maxWidth: "605px", minWidth: "325px" }}
                         >
                             <section>

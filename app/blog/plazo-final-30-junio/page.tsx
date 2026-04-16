@@ -35,7 +35,7 @@ const jsonLd = {
         "description": "Advertencia sobre la fecha límite del 30 de junio",
         "thumbnailUrl": "https://regularizacionmasiva.es/images/deadlines-thumbnail.jpg",
         "uploadDate": "2026-04-15T15:00:00Z",
-        "contentUrl": "https://www.tiktok.com/@abogadoextranjeriaonline/video/7600044602241846550"
+        "contentUrl": "https://www.tiktok.com/@abogadoextranjeriaonline/video/7495201342686309888"
     }
 };
 
@@ -69,8 +69,8 @@ export default function BlogPostPlazoFinal() {
                     <div className="relative w-full max-w-[340px] md:max-w-[400px] rounded-2xl overflow-hidden shadow-2xl border-4 border-slate-900 bg-black">
                         <blockquote
                             className="tiktok-embed"
-                            cite="https://www.tiktok.com/@abogadoextranjeriaonline/video/7600044602241846550"
-                            data-video-id="7600044602241846550"
+                            cite="https://www.tiktok.com/@abogadoextranjeriaonline/video/7495201342686309888"
+                            data-video-id="7495201342686309888"
                             style={{ maxWidth: "605px", minWidth: "325px" }}
                         >
                             <section>
